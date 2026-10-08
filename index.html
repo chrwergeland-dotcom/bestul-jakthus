@@ -264,6 +264,18 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
   #kontakt a,#kontakt p{font-size:1.1rem}
   footer,footer p,footer small{font-size:.9rem}
 }
+
+.galleri .mer{display:block;margin:28px auto 0;font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.9rem;padding:14px 26px;border:1px solid var(--fg);background:transparent;color:var(--fg);cursor:pointer;border-radius:999px}
+.galleri .g.mer-skjul{display:none}
+@media (max-width:760px){
+  .intro{text-align:left}
+  .intro p{font-size:1.45rem;line-height:1.3}
+  .intro small{margin-top:18px}
+  .liste li{flex-direction:column;gap:6px;padding:14px 0}
+  .liste li span{text-align:left;font-size:1rem}
+  .filter button{font-size:.82rem;padding:11px 16px}
+  .galleri .grid{column-gap:8px}
+}
 </style>
 </head>
 <body>
@@ -564,6 +576,7 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
       <figure class="g rv" data-k="natur"><img src="utsikt-gjest.jpg" srcset="utsikt-gjest-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Utsikten fra tunet etter regn." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g46">Utsikten fra tunet etter regn.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
       <figure class="g rv" data-k="natur"><img src="taakeskog-2.jpg" srcset="taakeskog-2-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Luksefjell i gråvær." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g47">Skogen i tåke, sett fra tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
     </div>
+    <button class="mer" id="gal-mer" hidden data-i18n="ga.mer">Vis flere bilder</button>
   </div>
 </section>
 <div class="lys" id="lys" hidden><button class="lukk" id="lys-lukk" aria-label="Lukk">×</button><button class="pil" id="lys-f" aria-label="Forrige">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="pil" id="lys-n" aria-label="Neste">›</button></div>
@@ -632,7 +645,7 @@ e1:"The meeting room in the barn<span>projector, wifi, board, whiteboard and fli
 "g.p2":"Trout fishing in Økteren is what many come for. The lake is private – for the Løvenskiold family, the Løvenskiold Fossum staff and the guests at Bestul. At the fishing spot there are benches, tables, a grill and a fire pit, and two boats with electric motors lie ready. We have permits, barrier keys and simple tackle, and Laila can turn the catch into dinner the same evening.",
 "g.p3":"Back in the yard there is the sauna and the hot tub, and the fire pit is lit when it gets dark. If you want a competition we lend darts, air rifles, axes and milk pails; in winter our neighbour Tarjei can take you dog sledding. Dogs are of course welcome.","g.obs":"Several lakes in Luksefjell are regulated for hydropower. All access below regulation dams is prohibited, and the ice on regulated lakes must always be treated as unsafe.",
 "g.h":"Activities",
-"ga.h":"Gallery","ga.p":"Tap a picture to see it large.","ga.f0":"All","ga.f1":"The house","ga.f3":"Food","ga.f4":"Nature",
+"ga.h":"Gallery","ga.mer":"Show more photos","ga.p":"Tap a picture to see it large.","ga.f0":"All","ga.f1":"The house","ga.f3":"Food","ga.f4":"Nature",
 g0:"The main house from 1892.",g1:"The yard at dusk, with the storehouse and the sauna.",g2:"The maple in front of the main house turns the yard yellow every October.",g3:"The sauna and hot tub stand on their own at the bottom of the yard.",g4:"The storehouse: meeting room by day, long table by night.",g5:"The bakehouse from the 1800s. 27 loaves a week in the early 1900s.",g6:"Old buildings and old forest, still standing.",g7:"Benches with hides by the fire pit in the yard.",g8:"The fireplace lounge upstairs, where the hunting parties sat.",g9:"The lounge. The trophies on the walls are from the Løvenskiold years.",g10:"The dining room, laid for three courses. The wallpaper is Gästgivars by Duro.",g11:"A corner of the dining room – Laila has built a bar here.",g12:"One of the ten rooms. Most have single beds; this one a double.",g13:"The long table in the storehouse, laid for a feast.",g14:"The hearth in the bakehouse is still in use.",g15:"The sauna in the yard.",g16:"The hot tub, out under the stars.",g17:"The marten in the kitchen keeps an eye on breakfast.",g18:"Nicole, Laila and Debbie outside the bakehouse.",g19:"Game dinner in the storehouse. Game from local hunters is often on the menu.",g20:"Sourdough from the bakehouse, baked by Debbie and Bård.",g21:"Home-made and local: bread, crowfoot, chestnuts and cones on the table.",g22:"The forest's gold: chanterelles and ceps from nearby.",g23:"Laila's sunshine buns, the guests' favourite.",g24:"Økteren, 469 m above sea level. Private lake with boat and permit.",g25:"The view over Luksefjell from the neighbouring summer farm.",g26:"Bestultjønn in autumn.",g27:"The hillside above the yard.",g28:"Fog over the forest early in the morning.",g30:"The forest around Bestul – Løvenskiold's since 1734.",g31:"Evening cast on Økteren.",g32:"Catch of the day. Laila turns it into dinner the same evening.",g33:"Two good friends hunting for supper.",g34:"The boat is ready for guests.",g35:"Dogs are of course welcome.",g36:"A break on the hay bales in the yard.",g37:"Dog and guest in front of the main house.",g38:"Løvenskiold's old sign by the lake. We have the key.",
 g39:"Bestul from the air: the barn, the main house, the storehouse and the bakehouse.",g40:"The yard from above, with the King's Road passing by.",g41:"Evening sky over Bestul.",g42:"Økteren from the air. Private lake, 469 m above sea level.",g43:"Morning fog in the forest.",g44:"Spruce top in fog.",g45:"The clouds lift over the ridge.",g46:"The view from the yard after rain.",g47:"Luksefjell in grey weather.",
 "k.k":"Call or write","k.e":"Email","k.a":"Address","k.s":"Follow","k.n":"We tailor every stay, because we know no two occasions are alike. Get in touch by email or phone.",
@@ -667,7 +680,8 @@ set(0);
 })();
 /* --- galleri --- */
 (()=>{const g=document.querySelector('.galleri');if(!g)return;const figs=[...g.querySelectorAll('.g')];
-g.querySelectorAll('.filter button').forEach(b=>b.addEventListener('click',()=>{g.querySelectorAll('.filter button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;figs.forEach(x=>x.classList.toggle('skjul',f!=='alle'&&x.dataset.k!==f));}));
+g.querySelectorAll('.filter button').forEach(b=>b.addEventListener('click',()=>{g.querySelectorAll('.filter button').forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;figs.forEach(x=>{x.classList.toggle('skjul',f!=='alle'&&x.dataset.k!==f);x.classList.remove('mer-skjul');});mer.hidden=true;}));
+const mer=document.getElementById('gal-mer');if(mer&&matchMedia('(max-width:760px)').matches&&figs.length>12){figs.slice(12).forEach(x=>x.classList.add('mer-skjul'));mer.hidden=false;mer.addEventListener('click',()=>{figs.forEach(x=>x.classList.remove('mer-skjul'));mer.hidden=true;});}
 const lys=document.getElementById('lys'),im=lys.querySelector('img'),cap=lys.querySelector('figcaption');let cur=0;
 const vis=()=>figs.filter(x=>!x.classList.contains('skjul'));
 const show=i=>{const v=vis();if(!v.length)return;cur=(i+v.length)%v.length;const f=v[cur];im.src=f.querySelector('img').src;im.alt=f.querySelector('img').alt;cap.innerHTML=f.querySelector('figcaption').innerHTML;lys.hidden=false;document.body.style.overflow='hidden';};
