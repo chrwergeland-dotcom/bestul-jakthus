@@ -5,16 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:title" content="Bestul Jakthus">
 <meta property="og:description" content="Gammelt jakthus i Luksefjell. Hjemmelagd mat, ørretfiske, badstue og boblebad. Ring, så blir vi enige.">
-<meta property="og:image" content="tunet.jpg">
+<meta property="og:image" content="https://bestuljakthus.com/tunet-drone.jpg">
+<meta property="og:url" content="https://bestuljakthus.com/">
+<meta name="theme-color" content="#223425">
+<link rel="canonical" href="https://bestuljakthus.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23223425'/%3E%3Cpath d='M32 8 L18 30 h7 L14 46 h36 L38 30 h7 Z' fill='%23f1efe7'/%3E%3Crect x='29' y='46' width='6' height='10' fill='%23f1efe7'/%3E%3C/svg%3E">
 <title>Bestul Jakthus</title>
+<style>
+@font-face{font-family:'Oswald';font-style:normal;font-weight:300;font-display:swap;src:url(oswald-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400;font-display:swap;src:url(oswald-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:500;font-display:swap;src:url(oswald-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(lora-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:normal;font-weight:500;font-display:swap;src:url(lora-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:italic;font-weight:400;font-display:swap;src:url(lora-latin-400-italic.woff2) format('woff2')}
+</style>
 <meta name="description" content="Bestul Jakthus, Luksefjell. Overnatting, hjemmelagd mat, ørretfiske, badstue og boblebad. Ring 47 33 88 77.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap">
 <style>
 /* Ett uttrykk: hvitt papir, granmørk tekst, rødmaling som eneste farge. Fotografiene gjør jobben; teksten er skilt, ikke artikkel. */
 :root{
-  --bg:#F7F6F2; --fg:#1B2420; --mute:#6B736D; --line:#DAD8D0; --rod:#9E3A2B; --hvit:#F7F6F2;
+  --bg:#F7F6F2; --fg:#1B2420; --mute:#5c645e; --line:#DAD8D0; --rod:#9E3A2B; --hvit:#F7F6F2;
   --cond:"Oswald","Arial Narrow",Impact,sans-serif;
   --serif:"Lora",Georgia,serif;
   color-scheme:light;
@@ -223,7 +232,7 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 .galleri .g figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;color:var(--hvit);background:linear-gradient(transparent,rgba(10,16,12,.72));font-family:var(--cond);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
 .galleri .g figcaption small{display:block;font-family:var(--serif);text-transform:none;letter-spacing:0;font-style:italic;opacity:.8;margin-top:3px;font-size:.8rem}
 .galleri .g:hover figcaption,.galleri .g:focus-within figcaption{opacity:1;transform:none}
-@media (hover:none){.galleri .g figcaption{opacity:1;transform:none}}
+@media (hover:none){.galleri .g figcaption{display:none}}
 .lys{position:fixed;inset:0;z-index:60;background:rgba(10,14,12,.94);display:grid;place-items:center;padding:16px}
 .lys figure{margin:0;max-width:min(96vw,1400px);max-height:92vh;display:grid;gap:10px;justify-items:center}
 .lys img{max-width:96vw;max-height:80vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)}
@@ -273,12 +282,12 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 
 <section class="hero">
   <div class="slides" aria-hidden="true" data-int="7000">
-    <img src="okteren-drone.jpg" alt="" width="1800" height="1013" fetchpriority="high" class="on" style="object-position:50% 60%">
-    <img src="tunet.jpg" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 60%">
-    <img src="tunet-drone-vid.jpg" alt="" width="1800" height="1013" loading="lazy" style="object-position:50% 55%">
-    <img src="kveld.jpg" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 50%">
-    <img src="skog.jpg" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 50%">
-    <img src="solnedgang-tak.jpg" alt="" width="832" height="1800" loading="lazy" style="object-position:50% 70%">
+    <img data-full src="okteren-drone.jpg" srcset="okteren-drone-480.webp 480w, okteren-drone-960.webp 960w, okteren-drone-1600.webp 1600w" sizes="100vw" alt="" width="1800" height="1013" fetchpriority="high" class="on" style="object-position:50% 60%">
+    <img data-full src="tunet.jpg" srcset="tunet-480.webp 480w, tunet-960.webp 960w" sizes="100vw" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 60%">
+    <img data-full src="tunet-drone-vid.jpg" srcset="tunet-drone-vid-480.webp 480w, tunet-drone-vid-960.webp 960w, tunet-drone-vid-1600.webp 1600w" sizes="100vw" alt="" width="1800" height="1013" loading="lazy" style="object-position:50% 55%">
+    <img data-full src="kveld.jpg" srcset="kveld-480.webp 480w, kveld-960.webp 960w" sizes="100vw" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 50%">
+    <img data-full src="skog.jpg" srcset="skog-480.webp 480w, skog-960.webp 960w" sizes="100vw" alt="" width="1800" height="1200" loading="lazy" style="object-position:50% 50%">
+    <img data-full src="solnedgang-tak.jpg" srcset="solnedgang-tak-480.webp 480w" sizes="100vw" alt="" width="832" height="1800" loading="lazy" style="object-position:50% 70%">
   </div>
   <div class="wrap">
     <p class="k s" style="color:inherit;opacity:.8" data-i18n="h.k">Bestul jakthus · Luksefjell · siden 1611</p>
@@ -300,7 +309,7 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 
 <!-- 1 HISTORIEN -->
 <section class="hist ebl" id="historien">
-  <img src="tunet-drone-vid.jpg" alt="" width="1800" height="1013">
+  <img loading="lazy" data-full src="tunet-drone-vid.jpg" srcset="tunet-drone-vid-480.webp 480w, tunet-drone-vid-960.webp 960w, tunet-drone-vid-1600.webp 1600w" sizes="100vw" alt="" width="1800" height="1013">
   <div class="wrap">
     <h2 data-i18n="hi.h">Fra klosterets jordebok til Lailas kjøkken</h2>
     <p class="ingress" data-i18n="hi.i">Bestul ble ryddet i skogen en gang mellom 1050 og 1350, står oppført i Gimsøy klosters jordebok i 1611 og har hørt til Løvenskiold på Fossum siden 1734. Skogbestyreren bodde nede, jaktselskapene oppe. Her er historien, år for år.</p>
@@ -309,68 +318,68 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 
 <section class="tl" aria-label="Tidslinje">
   <div class="wrap">
-    <div class="tl-aar" role="tablist">
-      <button data-i="0" class=on>1050<small data-i18n="t1.k">–1350</small></button>
-      <button data-i="1">1611<small data-i18n="t2.k"></small></button>
-      <button data-i="2">1662<small data-i18n="t3.k"></small></button>
-      <button data-i="3">1734<small data-i18n="t4.k"></small></button>
-      <button data-i="4">1700<small data-i18n="t5.k">-tallet</small></button>
-      <button data-i="5">1848<small data-i18n="t6.k"></small></button>
-      <button data-i="6">1800<small data-i18n="t7.k">-tallet</small></button>
-      <button data-i="7">1892<small data-i18n="t8.k"></small></button>
-      <button data-i="8">1911<small data-i18n="t9.k"></small></button>
-      <button data-i="9">1957<small data-i18n="t10.k"></small></button>
-      <button data-i="10">2001<small data-i18n="t11.k"></small></button>
-      <button data-i="11">2020<small data-i18n="t12.k"></small></button>
+    <div class="tl-aar" role="tablist" aria-label="Årstall">
+      <button role="tab" data-i="0" class=on>1050<small data-i18n="t1.k">–1350</small></button>
+      <button role="tab" data-i="1">1611<small data-i18n="t2.k"></small></button>
+      <button role="tab" data-i="2">1662<small data-i18n="t3.k"></small></button>
+      <button role="tab" data-i="3">1734<small data-i18n="t4.k"></small></button>
+      <button role="tab" data-i="4">1700<small data-i18n="t5.k">-tallet</small></button>
+      <button role="tab" data-i="5">1848<small data-i18n="t6.k"></small></button>
+      <button role="tab" data-i="6">1800<small data-i18n="t7.k">-tallet</small></button>
+      <button role="tab" data-i="7">1892<small data-i18n="t8.k"></small></button>
+      <button role="tab" data-i="8">1911<small data-i18n="t9.k"></small></button>
+      <button role="tab" data-i="9">1957<small data-i18n="t10.k"></small></button>
+      <button role="tab" data-i="10">2001<small data-i18n="t11.k"></small></button>
+      <button role="tab" data-i="11">2020<small data-i18n="t12.k"></small></button>
     </div>
   </div>
   <div class="tl-track" tabindex="0">
       <article class="tk">
-        <div class="bilde"><img src="fjellside.jpg" alt="" width="1558" height="1920" loading="lazy"></div>
+        <div class="bilde"><img src="fjellside.jpg" srcset="fjellside-480.webp 480w, fjellside-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="1558" height="1920" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1050</b><span data-i18n="t1.k2">–1350</span></div><h3 data-i18n="t1.h">Rydningen</h3><p data-i18n="t1.p">Noen hogger seg en plass i skogen øverst i Luksefjell. Bestul er det som kalles en gammelnorsk rydning, og på 1400-tallet nevnes gården som en av de eldste i bygda.</p><small data-i18n="t1.c">Foto: Lise M. Stang-Jacobsen</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="jordebok.jpg" alt="Jordebok for Gimsøy kloster" width="1224" height="918" loading="lazy"></div>
+        <div class="bilde"><img src="jordebok.jpg" srcset="jordebok-480.webp 480w, jordebok-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Jordebok for Gimsøy kloster" width="1224" height="918" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1611</b><span data-i18n="t2.k2"></span></div><h3 data-i18n="t2.h">«Beedstuel» i jordeboka</h3><p data-i18n="t2.p">Første gang plassen står i en kilde: Gimsøy klosters jordebok i Skien. Klosteret er for lengst nedlagt – etter reformasjonen eier kongen i København godset, og Bestul er en av småplassene kronen tar landskyld av.</p><small data-i18n="t2.c">Illustrasjon: Jordeboka slik den kan ha sett ut. Klosterets segl er gjengitt etter originalen.</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="skien-1800.jpg" alt="" width="779" height="487" loading="lazy"></div>
+        <div class="bilde"><img src="skien-1800.jpg" srcset="skien-1800-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="779" height="487" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1662</b><span data-i18n="t3.k2"></span></div><h3 data-i18n="t3.h">Kongen selger</h3><p data-i18n="t3.p">Kronen selger hele Gimsøy-godset for å finansiere krigene sine. Skogen i Luksefjell går fra hånd til hånd blant offiserer og kjøpmenn i Skien: Josten, Fien, Baar. Trelast og jern er det som gir makt.</p><small data-i18n="t3.c">Akvatint: John William Edy, «Town of Skeen», 1800 · Wikimedia Commons</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="loevenskiold.jpg" alt="Herman Leopoldus Løvenskiold" width="1328" height="2044" loading="lazy" style="object-position:50% 12%"></div>
+        <div class="bilde"><img src="loevenskiold.jpg" srcset="loevenskiold-480.webp 480w, loevenskiold-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Herman Leopoldus Løvenskiold" width="1328" height="2044" loading="lazy" style="object-position:50% 12%"></div>
         <div class="tekst"><div class="aarstall"><b>1734</b><span data-i18n="t4.k2"></span></div><h3 data-i18n="t4.h">Leopoldus kjøper Fossum – og Bestul</h3><p data-i18n="t4.p">Kanselliråd Herman Leopoldus kjøper Fossum jernverk sammen med svogrene sine. Jernverket trenger trekull, trekull trenger skog, og Bestul følger med. Fem år senere kjøper han seg adelskap og tar navnet Løvenskiold. Familien eier Bestul og skogen rundt den dag i dag.</p><small data-i18n="t4.c">Ukjent kunstner · Wikimedia Commons</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="gjestgiveri.jpg" alt="Bestul som gjestgiveri" width="1362" height="1023" loading="lazy"></div>
+        <div class="bilde"><img src="gjestgiveri.jpg" srcset="gjestgiveri-480.webp 480w, gjestgiveri-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Bestul som gjestgiveri" width="1362" height="1023" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1700</b><span data-i18n="t5.k2">-tallet</span></div><h3 data-i18n="t5.h">Gjestgiveriet ved Kongeveien</h3><p data-i18n="t5.p">Grusveien forbi tunet er den gamle Kongeveien mellom Skien og Kongsberg. Bestul ligger midt på strekningen, og i markedstidene er det stor trafikk gjennom Langeruddalen. Her er det gjestgiveri med ølservering for reisende – lenge før noen tenker på jakt.</p><small data-i18n="t5.c">Illustrasjon: Gjestgiveriet på Bestul.</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="klevfoss-1922.jpg" alt="Tømmerfløting" width="776" height="495" loading="lazy"></div>
+        <div class="bilde"><img src="klevfoss-1922.jpg" srcset="klevfoss-1922-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Tømmerfløting" width="776" height="495" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1848</b><span data-i18n="t6.k2"></span></div><h3 data-i18n="t6.h">Tømmer ned til Fossum</h3><p data-i18n="t6.p">Løvenskiold driver jerngruver og fløter tømmer nedover elva. Tømmeret fra Luksefjell går til Fossum og videre til Skien. Jernverket legges ned i 1867, men skogen blir i familien.</p><small data-i18n="t6.c">Tømmerfløting ved Klevfoss, 1922. Foto: Carl Normann · Nasjonalbiblioteket / Wikimedia Commons</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="oscar-ii.jpg" alt="Kong Oscar II" width="555" height="765" loading="lazy" style="object-position:50% 25%"></div>
+        <div class="bilde"><img src="oscar-ii.jpg" srcset="oscar-ii-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Kong Oscar II" width="555" height="765" loading="lazy" style="object-position:50% 25%"></div>
         <div class="tekst"><div class="aarstall"><b>1800</b><span data-i18n="t7.k2">-tallet</span></div><h3 data-i18n="t7.h">Kongen på Kongeveien</h3><p data-i18n="t7.p">Kong Oscar II skal ha reist denne veien: med hest til Fjellvannet, rodd over, overnatting på Sophies Minde, og neste dag opp forbi Bestul, inn Finnvollen og ned Lågendalen mot kongens by, Kongsberg. «Vi tilbyr fine turer i dag også, men ikke så lange som den kongen tok», sier Laila.</p><small data-i18n="t7.c">Radering: Anders Zorn, 1898 · Wikimedia Commons</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="hus-lonn.jpg" alt="" width="1558" height="1670" loading="lazy"></div>
+        <div class="bilde"><img src="hus-lonn.jpg" srcset="hus-lonn-480.webp 480w, hus-lonn-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="1558" height="1670" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1892</b><span data-i18n="t8.k2"></span></div><h3 data-i18n="t8.h">Hovedhuset bygges</h3><p data-i18n="t8.p">Det gamle bolighuset rives, og hovedhuset reises. Skogbestyreren bor i første etasje; andre etasje er avholdt jaktselskapene og familien Løvenskiolds egne ferie-, jakt- og fisketurer. Huset tømres av utvalgt virke fra Brånaåsen sør for Bestul. Derav navnet jakthus – og trofeene på veggene, som vitner om alle årene familien brukte huset.</p><small data-i18n="t8.c">Foto: Lise M. Stang-Jacobsen</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="skogbestyrer.jpg" alt="Skogbestyreren på tunet" width="1362" height="1023" loading="lazy"></div>
+        <div class="bilde"><img src="skogbestyrer.jpg" srcset="skogbestyrer-480.webp 480w, skogbestyrer-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Skogbestyreren på tunet" width="1362" height="1023" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1911</b><span data-i18n="t9.k2"></span></div><h3 data-i18n="t9.h">Skogbestyreren</h3><p data-i18n="t9.p">Einar Aas overtar som skogbestyrer og vaktmester, og blir boende på Bestul i 47 år – lengst av alle. Skogbestyrerne bor i første etasje helt til 1987. Tømmeret fløtes fortsatt nedover vassdragene, og bakstehuset på tunet er i full drift: på begynnelsen av 1900-tallet bakes det 27 brød i uka her.</p><small data-i18n="t9.c">Illustrasjon: Skogbestyreren på tunet.</small></div>
       </article>
       <article class="tk" data-tom>
-        <div class="bilde"><img src="fossum-1949.jpg" alt="Fossum hovedgård 1949" width="779" height="502" loading="lazy"></div>
+        <div class="bilde"><img src="fossum-1949.jpg" srcset="fossum-1949-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Fossum hovedgård 1949" width="779" height="502" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>1957</b><span data-i18n="t10.k2"></span></div><h3 data-i18n="t10.h">Brannen</h3><p data-i18n="t10.p">Natt til 21. februar tar treverket rundt pipa fyr, i både første og andre etasje. Huset berges. Senere legges gårdsdrifta ned og jorda plantes til med skog – Bestul blir et hus for skogbestyrere, jegere og feriegjester. Eierne sitter fortsatt på Fossum hovedgård i Skien, reist i 1811.</p><small data-i18n="t10.c">Fossum hovedgård, 1949. Foto: Riksantikvaren · Wikimedia Commons</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="stue.jpg" alt="" width="632" height="860" loading="lazy"></div>
+        <div class="bilde"><img src="stue.jpg" srcset="stue-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="632" height="860" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>2001</b><span data-i18n="t11.k2"></span></div><h3 data-i18n="t11.h">Jakt, fiske og møter</h3><p data-i18n="t11.p">Bestul bygges om med tanke på jakt, fiske og møtevirksomhet. I femten år er huset knutepunktet for elgjakta til godseier Løvenskiold. Laila er ansatt som kokk og står for maten.</p><small data-i18n="t11.c">Foto: Lise M. Stang-Jacobsen</small></div>
       </article>
       <article class="tk">
-        <div class="bilde"><img src="folka.jpg" alt="" width="1139" height="1552" style="object-position:50% 0" loading="lazy"></div>
+        <div class="bilde"><img src="folka.jpg" srcset="folka-480.webp 480w, folka-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="1139" height="1552" style="object-position:50% 0" loading="lazy"></div>
         <div class="tekst"><div class="aarstall"><b>2020</b><span data-i18n="t12.k2"></span></div><h3 data-i18n="t12.h">Laila tar over</h3><p data-i18n="t12.p">Huset blir stående tomt, og Laila tar over driften selv. Rommene pusses opp, det bygges bar i spisestua, og huset åpnes for alle som vil opp – ikke bare i jaktsesongen.</p><small data-i18n="t12.c">Foto: Lise M. Stang-Jacobsen</small></div>
       </article>
   </div>
@@ -384,16 +393,16 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
   <div class="wrap">
     <div class="hode"><h2 data-i18n="o.h">Overnatting</h2></div>
     <div class="kort">
-      <article class="rv ebl"><img src="soverom.jpg" alt="" width="638" height="860"><h3><span data-i18n="o1.h" style="color:inherit;font-weight:400">Rommene</span></h3><p data-i18n="o1.p">Tjue senger i ti rom: sju i hovedhuset og tre i Brygger'n tvers over tunet, med eget bad og tørkerom for våte klær. Hvert rom unikt og varmt – med trolig den beste sengen du har sovet i på lenge.</p></article>
-      <article class="rv ebl"><img src="peisestue.jpg" alt="" width="634" height="860"><h3><span data-i18n="o2.h" style="color:inherit;font-weight:400">Peisestua</span></h3><p data-i18n="o2.p">I andre etasje, der jaktselskapene en gang satt, er det fortsatt fyr i peisen og klart for lange kvelder og gode samtaler. Huselgen Helge henger på veggen og har hørt en røverhistorie eller to.</p></article>
-      <article class="rv ebl"><img src="spisestue.jpg" alt="Spisestua med dekket langbord" width="1558" height="1790"><h3><span data-i18n="o3.h" style="color:inherit;font-weight:400">Spisestua og kjøkkenet</span></h3><p data-i18n="o3.p">Langbordet dekkes i spisestua, og kjøkkenet er i gang fra frokost til kveldsmat. Baren har alle rettigheter. Alt lages her på huset.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="soverom.jpg" srcset="soverom-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="638" height="860"><h3><span data-i18n="o1.h" style="color:inherit;font-weight:400">Rommene</span></h3><p data-i18n="o1.p">Tjue senger i ti rom: sju i hovedhuset og tre i Brygger'n tvers over tunet, med eget bad og tørkerom for våte klær. Hvert rom unikt og varmt – med trolig den beste sengen du har sovet i på lenge.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="peisestue.jpg" srcset="peisestue-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="634" height="860"><h3><span data-i18n="o2.h" style="color:inherit;font-weight:400">Peisestua</span></h3><p data-i18n="o2.p">I andre etasje, der jaktselskapene en gang satt, er det fortsatt fyr i peisen og klart for lange kvelder og gode samtaler. Huselgen Helge henger på veggen og har hørt en røverhistorie eller to.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="spisestue.jpg" srcset="spisestue-480.webp 480w, spisestue-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Spisestua med dekket langbord" width="1558" height="1790"><h3><span data-i18n="o3.h" style="color:inherit;font-weight:400">Spisestua og kjøkkenet</span></h3><p data-i18n="o3.p">Langbordet dekkes i spisestua, og kjøkkenet er i gang fra frokost til kveldsmat. Baren har alle rettigheter. Alt lages her på huset.</p></article>
     </div>
   </div>
 </section>
 
 <!-- 3 KURS OG EVENT -->
 <section class="sitat ebl">
-  <img src="halmball.jpg" alt="" width="1800" height="1200">
+  <img loading="lazy" data-full src="halmball.jpg" srcset="halmball-480.webp 480w, halmball-960.webp 960w, halmball-1600.webp 1600w" sizes="100vw" alt="" width="1800" height="1200">
   <div class="wrap">
     <p data-i18n="q2.p">Møtet i stabburet. Middagen ved langbordet. Resten av kvelden på tunet.</p>
     <span class="k s" style="color:inherit" data-i18n="q2.k">Kurs og event</span>
@@ -404,9 +413,9 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
   <div class="wrap">
     <div class="hode"><h2 data-i18n="k2.h">Kurs og event</h2></div>
     <div class="kort">
-      <article class="rv ebl"><img src="stabbur.jpg" alt="" width="1558" height="1720"><h3><span data-i18n="p1.h" style="color:inherit;font-weight:400">Møte og overnatting</span><span>2 500</span></h3><p data-i18n="p1.p">Møterom i låven, tre retter i spisestua, kaffe ved peisen, overnatting og frokost.</p></article>
-      <article class="rv ebl"><img src="viltmat.jpg" alt="" width="574" height="784"><h3><span data-i18n="p2.h" style="color:inherit;font-weight:400">Lunsj til lunsj</span><span>3 200</span></h3><p data-i18n="p2.p">Lunsj dag én og to, tre retter i spisestua eller stabburet, overnatting, frokost og møterom med kaffe, frukt og snacks.</p></article>
-      <article class="rv ebl"><img src="fisker-hund.jpg" alt="" width="1800" height="1200"><h3><span data-i18n="p3.h" style="color:inherit;font-weight:400">Ørretfiske i Økteren</span><span>3 200</span></h3><p data-i18n="p3.p">Fiskekort og bomnøkkel, to båter med elmotor, lunsj begge dager, tre retter, overnatting og frokost.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="stabbur.jpg" srcset="stabbur-480.webp 480w, stabbur-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="1558" height="1720"><h3><span data-i18n="p1.h" style="color:inherit;font-weight:400">Møte og overnatting</span><span>2 500</span></h3><p data-i18n="p1.p">Møterom i låven, tre retter i spisestua, kaffe ved peisen, overnatting og frokost.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="viltmat.jpg" srcset="viltmat-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="574" height="784"><h3><span data-i18n="p2.h" style="color:inherit;font-weight:400">Lunsj til lunsj</span><span>3 200</span></h3><p data-i18n="p2.p">Lunsj dag én og to, tre retter i spisestua eller stabburet, overnatting, frokost og møterom med kaffe, frukt og snacks.</p></article>
+      <article class="rv ebl"><img loading="lazy" src="fisker-hund.jpg" srcset="fisker-hund-480.webp 480w, fisker-hund-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="" width="1800" height="1200"><h3><span data-i18n="p3.h" style="color:inherit;font-weight:400">Ørretfiske i Økteren</span><span>3 200</span></h3><p data-i18n="p3.p">Fiskekort og bomnøkkel, to båter med elmotor, lunsj begge dager, tre retter, overnatting og frokost.</p></article>
     </div>
     <ul class="liste" style="margin-top:clamp(32px,5vw,56px)">
       <li data-i18n="e1">Møterommet i låven<span>prosjektor, wifi, tavle, whiteboard og flipover – kaffe, te, frukt og snacks står klart</span></li>
@@ -420,7 +429,7 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 
 <!-- 4 MAT OG DRIKKE -->
 <section class="sitat ebl" id="mat">
-  <img src="bakstehus-stor.jpg" alt="" width="1100" height="1186">
+  <img loading="lazy" data-full src="bakstehus-stor.jpg" srcset="bakstehus-stor-480.webp 480w, bakstehus-stor-960.webp 960w" sizes="100vw" alt="" width="1100" height="1186">
   <div class="wrap">
     <p data-i18n="q.p">«Det er ingen bil som leverer varer her ute. Så maten lager vi selv.»</p>
     <span class="k s" style="color:inherit" data-i18n="q.k">Laila Busk, kokk og vert</span>
@@ -437,14 +446,14 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
     </div>
     <div class="folk">
       <div class="kar" aria-label="Mat og vertskap">
-        <img src="folka.jpg" alt="Nicole, Laila og Debbie ved bakstehuset" width="1139" height="1552" class="on">
-        <img src="viltmat.jpg" alt="Viltmat på tallerken" width="574" height="784" loading="lazy">
-        <img src="brod.jpg" alt="Nybakt surdeigsbrød" width="1558" height="1100" loading="lazy">
-        <img src="bakstehus.jpg" alt="Grua i bakstehuset" width="1558" height="1600" loading="lazy">
-        <img src="spisestue.jpg" alt="Dekket langbord i spisestua" width="1558" height="1790" loading="lazy">
-        <img src="stabbur.jpg" alt="Langbordet i stabburet" width="1558" height="1720" loading="lazy">
-        <img src="sopp.jpg" alt="Kurver med kantarell og steinsopp" width="634" height="860" loading="lazy">
-        <img src="brodbord.jpg" alt="Brød på festbordet" width="632" height="860" loading="lazy">
+        <img loading="lazy" src="folka.jpg" srcset="folka-480.webp 480w, folka-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Nicole, Laila og Debbie ved bakstehuset" width="1139" height="1552" class="on">
+        <img src="viltmat.jpg" srcset="viltmat-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Viltmat på tallerken" width="574" height="784" loading="lazy">
+        <img src="brod.jpg" srcset="brod-480.webp 480w, brod-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Nybakt surdeigsbrød" width="1558" height="1100" loading="lazy">
+        <img src="bakstehus.jpg" srcset="bakstehus-480.webp 480w, bakstehus-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Grua i bakstehuset" width="1558" height="1600" loading="lazy">
+        <img src="spisestue.jpg" srcset="spisestue-480.webp 480w, spisestue-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Dekket langbord i spisestua" width="1558" height="1790" loading="lazy">
+        <img src="stabbur.jpg" srcset="stabbur-480.webp 480w, stabbur-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Langbordet i stabburet" width="1558" height="1720" loading="lazy">
+        <img src="sopp.jpg" srcset="sopp-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Kurver med kantarell og steinsopp" width="634" height="860" loading="lazy">
+        <img src="brodbord.jpg" srcset="brodbord-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Brød på festbordet" width="632" height="860" loading="lazy">
       </div>
       <p data-i18n="f.p"><b>Laila</b> driver stedet og tar imot alle selv, med god hjelp fra <b>Nicole</b> og <b>Debbie</b>. Allergier og ønsker tar vi på telefonen.</p>
     </div>
@@ -455,7 +464,7 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 <section class="sek rv ebl" id="aktiviteter" style="padding-top:0">
   <div class="wrap to">
     <div class="folk">
-      <img src="okteren-drone.jpg" alt="Økteren fra lufta" width="1800" height="1013" style="aspect-ratio:4/3">
+      <img loading="lazy" src="okteren-drone.jpg" srcset="okteren-drone-480.webp 480w, okteren-drone-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Økteren fra lufta" width="1800" height="1013" style="aspect-ratio:4/3">
       <p data-i18n="g.b">Økteren ligger 469 meter over havet, et stykke innover fra tunet. Vannet er privat, og båten ligger klar. Vi har fiskekort og bomnøkler til våre gjester.</p>
     </div>
     <div>
@@ -469,12 +478,12 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 </section>
 
 <section class="vegg" aria-label="Ute ved Bestul" style="margin-bottom:6px">
-  <figure class="a rv ebl"><img src="vannet-to.jpg" alt="To gjester ved Økteren med fiskestang og kaffe" width="1800" height="1200"></figure>
-  <figure class="b rv ebl"><img src="hund-orret.jpg" alt="Ørret i hendene, hunden lukter" width="1200" height="1800"></figure>
-  <figure class="c rv ebl"><img src="kast.jpg" alt="Kast med fluestang" width="1800" height="1200"></figure>
-  <figure class="d rv ebl"><img src="gran-taake.jpg" alt="Gran i tåke" width="831" height="1800"></figure>
-  <figure class="e rv ebl"><img src="utsikt-hoest.jpg" alt="Utsikt over Bestultjønn om høsten" width="1558" height="1670"></figure>
-  <figure class="f rv ebl"><img src="hund-vann.jpg" alt="Gjest og hund ved vannkanten" width="1800" height="1200"></figure>
+  <figure class="a rv ebl"><img loading="lazy" src="vannet-to.jpg" srcset="vannet-to-480.webp 480w, vannet-to-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="To gjester ved Økteren med fiskestang og kaffe" width="1800" height="1200"></figure>
+  <figure class="b rv ebl"><img loading="lazy" src="hund-orret.jpg" srcset="hund-orret-480.webp 480w, hund-orret-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Ørret i hendene, hunden lukter" width="1200" height="1800"></figure>
+  <figure class="c rv ebl"><img loading="lazy" src="kast.jpg" srcset="kast-480.webp 480w, kast-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Kast med fluestang" width="1800" height="1200"></figure>
+  <figure class="d rv ebl"><img loading="lazy" src="gran-taake.jpg" srcset="gran-taake-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Gran i tåke" width="831" height="1800"></figure>
+  <figure class="e rv ebl"><img loading="lazy" src="utsikt-hoest.jpg" srcset="utsikt-hoest-480.webp 480w, utsikt-hoest-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Utsikt over Bestultjønn om høsten" width="1558" height="1670"></figure>
+  <figure class="f rv ebl"><img loading="lazy" src="hund-vann.jpg" srcset="hund-vann-480.webp 480w, hund-vann-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Gjest og hund ved vannkanten" width="1800" height="1200"></figure>
 </section>
 
 <!-- 6 GALLERI -->
@@ -485,53 +494,53 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
       <button class="on" data-f="alle" data-i18n="ga.f0">Alle</button><button data-f="hus" data-i18n="ga.f1">Huset</button><button data-f="mat" data-i18n="ga.f3">Mat</button><button data-f="natur" data-i18n="ga.f4">Natur</button>
     </div>
     <div class="grid">
-      <figure class="g rv" data-k="hus"><img src="hus-snore.jpg" alt="Hovedhuset fra 1892." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g0">Hovedhuset fra 1892.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="tunet.jpg" alt="Tunet i kveldslys, med stabburet og badstua." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g1">Tunet i kveldslys, med stabburet og badstua.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="hus-lonn.jpg" alt="Lønna foran hovedhuset bader tunet i gult hver oktober." width="1558" height="1670" loading="lazy"><figcaption><span data-i18n="g2">Lønna foran hovedhuset bader tunet i gult hver oktober.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="kveld.jpg" alt="Badstua og boblebadet står for seg selv nederst på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g3">Badstua og boblebadet står for seg selv nederst på tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="roedhus.jpg" alt="Stabburet: møterom om dagen, langbord om kvelden." width="2200" height="2420" loading="lazy"><figcaption><span data-i18n="g4">Stabburet: møterom om dagen, langbord om kvelden.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="bakstehus-ute.jpg" alt="Bakstehuset fra 1800-tallet. 27 brød i uka på begynnelsen av 1900-tallet." width="574" height="776" loading="lazy"><figcaption><span data-i18n="g5">Bakstehuset fra 1800-tallet. 27 brød i uka på begynnelsen av 1900-tallet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="roedvegg.jpg" alt="Gamle bygg og gammel skog som fortsatt står." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g6">Gamle bygg og gammel skog som fortsatt står.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="tun-benker.jpg" alt="Benker med skinnfeller ved bålplassen på tunet." width="1558" height="1690" loading="lazy"><figcaption><span data-i18n="g7">Benker med skinnfeller ved bålplassen på tunet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="peisestue.jpg" alt="Peisestua i andre etasje, der jaktselskapene satt." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g8">Peisestua i andre etasje, der jaktselskapene satt.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="stue.jpg" alt="Stua. Trofeene på veggene er fra årene Løvenskiold brukte huset." width="632" height="860" loading="lazy"><figcaption><span data-i18n="g9">Stua. Trofeene på veggene er fra årene Løvenskiold brukte huset.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="spisestue.jpg" alt="Spisestua, dekket til tre retter. Tapetet er Gästgivars fra Duro." width="1558" height="1790" loading="lazy"><figcaption><span data-i18n="g10">Spisestua, dekket til tre retter. Tapetet er Gästgivars fra Duro.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="spisestue-hjorne.jpg" alt="Hjørnet i spisestua – Laila har bygget egen bar her." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g11">Hjørnet i spisestua – Laila har bygget egen bar her.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="soverom.jpg" alt="Ett av de ti rommene. De fleste har enkeltsenger, dette har dobbeltseng." width="638" height="860" loading="lazy"><figcaption><span data-i18n="g12">Ett av de ti rommene. De fleste har enkeltsenger, dette har dobbeltseng.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="stabbur.jpg" alt="Langbordet i stabburet, dekket til fest." width="1558" height="1720" loading="lazy"><figcaption><span data-i18n="g13">Langbordet i stabburet, dekket til fest.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="bakstehus.jpg" alt="Grua i bakstehuset brukes fortsatt." width="1558" height="1600" loading="lazy"><figcaption><span data-i18n="g14">Grua i bakstehuset brukes fortsatt.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="badstue.jpg" alt="Badstua på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g15">Badstua på tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="boblebad.jpg" alt="Boblebadet, ute under stjernene." width="547" height="365" loading="lazy"><figcaption><span data-i18n="g16">Boblebadet, ute under stjernene.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="maar.jpg" alt="Måren på kjøkkenet holder et øye med frokosten." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g17">Måren på kjøkkenet holder et øye med frokosten.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="folka.jpg" alt="Nicole, Laila og Debbie utenfor bakstehuset." width="1139" height="1552" loading="lazy"><figcaption><span data-i18n="g18">Nicole, Laila og Debbie utenfor bakstehuset.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="viltmat.jpg" alt="Viltmåltid i stabburet. Vilt fra lokale jegere står ofte på menyen." width="574" height="784" loading="lazy"><figcaption><span data-i18n="g19">Viltmåltid i stabburet. Vilt fra lokale jegere står ofte på menyen.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="brod.jpg" alt="Surdeigsbrød fra bakstehuset, bakt av Debbie og Bård." width="1558" height="1100" loading="lazy"><figcaption><span data-i18n="g20">Surdeigsbrød fra bakstehuset, bakt av Debbie og Bård.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="brodbord.jpg" alt="Hjemmelaget og kortreist: brød, kråketær, kastanjer og kongler på bordet." width="632" height="860" loading="lazy"><figcaption><span data-i18n="g21">Hjemmelaget og kortreist: brød, kråketær, kastanjer og kongler på bordet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="sopp.jpg" alt="Skogens gull: kantarell og steinsopp fra nærområdet." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g22">Skogens gull: kantarell og steinsopp fra nærområdet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="mat"><img src="boller.jpg" alt="Lailas solskinnsboller, favoritten blant gjestene." width="900" height="1000" loading="lazy"><figcaption><span data-i18n="g23">Lailas solskinnsboller, favoritten blant gjestene.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="vannet-to.jpg" alt="Økteren, 469 moh. Privat vann med båt og fiskekort." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g24">Økteren, 469 moh. Privat vann med båt og fiskekort.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="utsikt.jpg" alt="Utsikten over Luksefjell fra naboseteren." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g25">Utsikten over Luksefjell fra tunet.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="utsikt-hoest.jpg" alt="Bestultjønn om høsten." width="1558" height="1670" loading="lazy"><figcaption><span data-i18n="g26">Bestultjønn om høsten.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="fjellside.jpg" alt="Åssiden over tunet." width="1558" height="1920" loading="lazy"><figcaption><span data-i18n="g27">Åssiden over tunet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="taake.jpg" alt="Tåke over skogen en tidlig morgen." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g28">Tåke over skogen en tidlig morgen.</span><small>Foto: Kristoffer Tveit</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="skog.jpg" alt="Skogen rundt Bestul – Løvenskiolds siden 1734." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g30">Skogen rundt Bestul – Løvenskiolds siden 1734.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="kast.jpg" alt="Kveldskast i Økteren." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g31">Kveldskast i Økteren.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="hund-orret.jpg" alt="Dagens fangst. Laila lager middag av den samme kveld." width="1200" height="1800" loading="lazy"><figcaption><span data-i18n="g32">Dagens fangst. Laila lager middag av den samme kveld.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="fisker-hund.jpg" alt="To gode venner på jakt etter kveldsmat." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g33">Fisker og hund ved Økteren.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="fisker-bat.jpg" alt="Båten ligger klar for gjestene." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g34">Båten ligger klar for gjestene.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="hund-vann.jpg" alt="Hunder er selvfølgelig velkomne." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g35">Hunder er selvfølgelig velkomne.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="halmball.jpg" alt="Pause på halmballene på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g36">Pause på halmballene på tunet.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="tun-hund.jpg" alt="Hund og gjest foran hovedhuset." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g37">Hund og gjest foran hovedhuset.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="skilt.jpg" alt="Løvenskiolds gamle skilt ved vannet. Vi har nøkkelen." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g38">Løvenskiolds gamle skilt ved vannet. Vi har nøkkelen.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="tunet-drone-vid.jpg" alt="Bestul fra lufta: låven, hovedhuset, stabburet og bakstehuset." width="1800" height="1013" loading="lazy"><figcaption><span data-i18n="g39">Bestul fra lufta: låven, hovedhuset, stabburet og bakstehuset.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="tunet-drone.jpg" alt="Tunet sett ovenfra, med Kongeveien forbi." width="1140" height="760" loading="lazy"><figcaption><span data-i18n="g40">Tunet sett ovenfra, med Kongeveien forbi.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="hus"><img src="solnedgang-tak.jpg" alt="Kveldshimmel over Bestul." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g41">Kveldshimmel over hovedhuset.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="okteren-drone.jpg" alt="Økteren fra lufta. Privat vann, 469 moh." width="1800" height="1013" loading="lazy"><figcaption><span data-i18n="g42">Økteren fra lufta. Privat vann, 469 moh.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="taakeskog.jpg" alt="Tåka ligger i skogen om morgenen." width="1800" height="832" loading="lazy"><figcaption><span data-i18n="g43">Tåka ligger i skogen om morgenen.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="gran-taake.jpg" alt="Grantopp i tåke." width="831" height="1800" loading="lazy"><figcaption><span data-i18n="g44">Grantopp i tåke.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="skyer.jpg" alt="Skyene letter over åsen." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g45">Skyene letter over åsen.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="utsikt-gjest.jpg" alt="Utsikten fra tunet etter regn." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g46">Utsikten fra tunet etter regn.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
-      <figure class="g rv" data-k="natur"><img src="taakeskog-2.jpg" alt="Luksefjell i gråvær." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g47">Skogen i tåke, sett fra tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="hus-snore.jpg" srcset="hus-snore-480.webp 480w, hus-snore-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Hovedhuset fra 1892." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g0">Hovedhuset fra 1892.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="tunet.jpg" srcset="tunet-480.webp 480w, tunet-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Tunet i kveldslys, med stabburet og badstua." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g1">Tunet i kveldslys, med stabburet og badstua.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="hus-lonn.jpg" srcset="hus-lonn-480.webp 480w, hus-lonn-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Lønna foran hovedhuset bader tunet i gult hver oktober." width="1558" height="1670" loading="lazy"><figcaption><span data-i18n="g2">Lønna foran hovedhuset bader tunet i gult hver oktober.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="kveld.jpg" srcset="kveld-480.webp 480w, kveld-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Badstua og boblebadet står for seg selv nederst på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g3">Badstua og boblebadet står for seg selv nederst på tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="roedhus.jpg" srcset="roedhus-480.webp 480w, roedhus-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Stabburet: møterom om dagen, langbord om kvelden." width="2200" height="2420" loading="lazy"><figcaption><span data-i18n="g4">Stabburet: møterom om dagen, langbord om kvelden.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="bakstehus-ute.jpg" srcset="bakstehus-ute-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Bakstehuset fra 1800-tallet. 27 brød i uka på begynnelsen av 1900-tallet." width="574" height="776" loading="lazy"><figcaption><span data-i18n="g5">Bakstehuset fra 1800-tallet. 27 brød i uka på begynnelsen av 1900-tallet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="roedvegg.jpg" srcset="roedvegg-480.webp 480w, roedvegg-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Gamle bygg og gammel skog som fortsatt står." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g6">Gamle bygg og gammel skog som fortsatt står.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="tun-benker.jpg" srcset="tun-benker-480.webp 480w, tun-benker-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Benker med skinnfeller ved bålplassen på tunet." width="1558" height="1690" loading="lazy"><figcaption><span data-i18n="g7">Benker med skinnfeller ved bålplassen på tunet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="peisestue.jpg" srcset="peisestue-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Peisestua i andre etasje, der jaktselskapene satt." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g8">Peisestua i andre etasje, der jaktselskapene satt.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="stue.jpg" srcset="stue-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Stua. Trofeene på veggene er fra årene Løvenskiold brukte huset." width="632" height="860" loading="lazy"><figcaption><span data-i18n="g9">Stua. Trofeene på veggene er fra årene Løvenskiold brukte huset.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="spisestue.jpg" srcset="spisestue-480.webp 480w, spisestue-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Spisestua, dekket til tre retter. Tapetet er Gästgivars fra Duro." width="1558" height="1790" loading="lazy"><figcaption><span data-i18n="g10">Spisestua, dekket til tre retter. Tapetet er Gästgivars fra Duro.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="spisestue-hjorne.jpg" srcset="spisestue-hjorne-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Hjørnet i spisestua – Laila har bygget egen bar her." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g11">Hjørnet i spisestua – Laila har bygget egen bar her.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="soverom.jpg" srcset="soverom-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Ett av de ti rommene. De fleste har enkeltsenger, dette har dobbeltseng." width="638" height="860" loading="lazy"><figcaption><span data-i18n="g12">Ett av de ti rommene. De fleste har enkeltsenger, dette har dobbeltseng.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="stabbur.jpg" srcset="stabbur-480.webp 480w, stabbur-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Langbordet i stabburet, dekket til fest." width="1558" height="1720" loading="lazy"><figcaption><span data-i18n="g13">Langbordet i stabburet, dekket til fest.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="bakstehus.jpg" srcset="bakstehus-480.webp 480w, bakstehus-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Grua i bakstehuset brukes fortsatt." width="1558" height="1600" loading="lazy"><figcaption><span data-i18n="g14">Grua i bakstehuset brukes fortsatt.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="badstue.jpg" srcset="badstue-480.webp 480w, badstue-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Badstua på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g15">Badstua på tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="boblebad.jpg" srcset="boblebad-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Boblebadet, ute under stjernene." width="547" height="365" loading="lazy"><figcaption><span data-i18n="g16">Boblebadet, ute under stjernene.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="maar.jpg" srcset="maar-480.webp 480w, maar-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Måren på kjøkkenet holder et øye med frokosten." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g17">Måren på kjøkkenet holder et øye med frokosten.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="folka.jpg" srcset="folka-480.webp 480w, folka-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Nicole, Laila og Debbie utenfor bakstehuset." width="1139" height="1552" loading="lazy"><figcaption><span data-i18n="g18">Nicole, Laila og Debbie utenfor bakstehuset.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="viltmat.jpg" srcset="viltmat-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Viltmåltid i stabburet. Vilt fra lokale jegere står ofte på menyen." width="574" height="784" loading="lazy"><figcaption><span data-i18n="g19">Viltmåltid i stabburet. Vilt fra lokale jegere står ofte på menyen.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="brod.jpg" srcset="brod-480.webp 480w, brod-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Surdeigsbrød fra bakstehuset, bakt av Debbie og Bård." width="1558" height="1100" loading="lazy"><figcaption><span data-i18n="g20">Surdeigsbrød fra bakstehuset, bakt av Debbie og Bård.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="brodbord.jpg" srcset="brodbord-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Hjemmelaget og kortreist: brød, kråketær, kastanjer og kongler på bordet." width="632" height="860" loading="lazy"><figcaption><span data-i18n="g21">Hjemmelaget og kortreist: brød, kråketær, kastanjer og kongler på bordet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="sopp.jpg" srcset="sopp-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Skogens gull: kantarell og steinsopp fra nærområdet." width="634" height="860" loading="lazy"><figcaption><span data-i18n="g22">Skogens gull: kantarell og steinsopp fra nærområdet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="mat"><img src="boller.jpg" srcset="boller-480.webp 480w, boller-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Lailas solskinnsboller, favoritten blant gjestene." width="900" height="1000" loading="lazy"><figcaption><span data-i18n="g23">Lailas solskinnsboller, favoritten blant gjestene.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="vannet-to.jpg" srcset="vannet-to-480.webp 480w, vannet-to-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Økteren, 469 moh. Privat vann med båt og fiskekort." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g24">Økteren, 469 moh. Privat vann med båt og fiskekort.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="utsikt.jpg" srcset="utsikt-480.webp 480w, utsikt-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Utsikten over Luksefjell fra naboseteren." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g25">Utsikten over Luksefjell fra tunet.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="utsikt-hoest.jpg" srcset="utsikt-hoest-480.webp 480w, utsikt-hoest-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Bestultjønn om høsten." width="1558" height="1670" loading="lazy"><figcaption><span data-i18n="g26">Bestultjønn om høsten.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="fjellside.jpg" srcset="fjellside-480.webp 480w, fjellside-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Åssiden over tunet." width="1558" height="1920" loading="lazy"><figcaption><span data-i18n="g27">Åssiden over tunet.</span><small>Foto: Lise M. Stang-Jacobsen</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="taake.jpg" srcset="taake-480.webp 480w, taake-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Tåke over skogen en tidlig morgen." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g28">Tåke over skogen en tidlig morgen.</span><small>Foto: Kristoffer Tveit</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="skog.jpg" srcset="skog-480.webp 480w, skog-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Skogen rundt Bestul – Løvenskiolds siden 1734." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g30">Skogen rundt Bestul – Løvenskiolds siden 1734.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="kast.jpg" srcset="kast-480.webp 480w, kast-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Kveldskast i Økteren." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g31">Kveldskast i Økteren.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="hund-orret.jpg" srcset="hund-orret-480.webp 480w, hund-orret-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Dagens fangst. Laila lager middag av den samme kveld." width="1200" height="1800" loading="lazy"><figcaption><span data-i18n="g32">Dagens fangst. Laila lager middag av den samme kveld.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="fisker-hund.jpg" srcset="fisker-hund-480.webp 480w, fisker-hund-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="To gode venner på jakt etter kveldsmat." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g33">Fisker og hund ved Økteren.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="fisker-bat.jpg" srcset="fisker-bat-480.webp 480w, fisker-bat-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Båten ligger klar for gjestene." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g34">Båten ligger klar for gjestene.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="hund-vann.jpg" srcset="hund-vann-480.webp 480w, hund-vann-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Hunder er selvfølgelig velkomne." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g35">Hunder er selvfølgelig velkomne.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="halmball.jpg" srcset="halmball-480.webp 480w, halmball-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Pause på halmballene på tunet." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g36">Pause på halmballene på tunet.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="tun-hund.jpg" srcset="tun-hund-480.webp 480w, tun-hund-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Hund og gjest foran hovedhuset." width="1800" height="1200" loading="lazy"><figcaption><span data-i18n="g37">Hund og gjest foran hovedhuset.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="skilt.jpg" srcset="skilt-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Løvenskiolds gamle skilt ved vannet. Vi har nøkkelen." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g38">Løvenskiolds gamle skilt ved vannet. Vi har nøkkelen.</span><small>Foto: Krister Sørbø</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="tunet-drone-vid.jpg" srcset="tunet-drone-vid-480.webp 480w, tunet-drone-vid-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Bestul fra lufta: låven, hovedhuset, stabburet og bakstehuset." width="1800" height="1013" loading="lazy"><figcaption><span data-i18n="g39">Bestul fra lufta: låven, hovedhuset, stabburet og bakstehuset.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="tunet-drone.jpg" srcset="tunet-drone-480.webp 480w, tunet-drone-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Tunet sett ovenfra, med Kongeveien forbi." width="1140" height="760" loading="lazy"><figcaption><span data-i18n="g40">Tunet sett ovenfra, med Kongeveien forbi.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="hus"><img src="solnedgang-tak.jpg" srcset="solnedgang-tak-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Kveldshimmel over Bestul." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g41">Kveldshimmel over hovedhuset.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="okteren-drone.jpg" srcset="okteren-drone-480.webp 480w, okteren-drone-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Økteren fra lufta. Privat vann, 469 moh." width="1800" height="1013" loading="lazy"><figcaption><span data-i18n="g42">Økteren fra lufta. Privat vann, 469 moh.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="taakeskog.jpg" srcset="taakeskog-480.webp 480w, taakeskog-960.webp 960w" sizes="(max-width:760px) 100vw, 50vw" alt="Tåka ligger i skogen om morgenen." width="1800" height="832" loading="lazy"><figcaption><span data-i18n="g43">Tåka ligger i skogen om morgenen.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="gran-taake.jpg" srcset="gran-taake-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Grantopp i tåke." width="831" height="1800" loading="lazy"><figcaption><span data-i18n="g44">Grantopp i tåke.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="skyer.jpg" srcset="skyer-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Skyene letter over åsen." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g45">Skyene letter over åsen.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="utsikt-gjest.jpg" srcset="utsikt-gjest-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Utsikten fra tunet etter regn." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g46">Utsikten fra tunet etter regn.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
+      <figure class="g rv" data-k="natur"><img src="taakeskog-2.jpg" srcset="taakeskog-2-480.webp 480w" sizes="(max-width:760px) 100vw, 50vw" alt="Luksefjell i gråvær." width="832" height="1800" loading="lazy"><figcaption><span data-i18n="g47">Skogen i tåke, sett fra tunet.</span><small>Foto: Christian Wergeland</small></figcaption></figure>
     </div>
   </div>
 </section>
@@ -661,52 +670,6 @@ addEventListener('keydown',e=>{if(lys.hidden)return;if(e.key==='Escape')hide();i
   let tick=false;
   const par=()=>{tick=false;const h=innerHeight;bands.forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>h)return;const p=(r.top+r.height/2-h/2)/h;im.style.transform=`translate3d(0,${(p*-7).toFixed(2)}%,0) scale(1.14)`;});};
   addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(par);}},{passive:true});par();
-})();
-/* --- redigering direkte på siden (eier) --- */
-(async()=>{
-  if(!window.claude||!claude.use)return;
-  const user=await claude.use('user'); if(!user||!(await user.canEdit()))return;
-  const art=await claude.use('artifact'); if(!art)return;
-  const cm=await claude.use('comments');
-  const bilder=['hus-snore','utsikt','vannet-to','hund-orret','peisestue','halmball','stabbur','boblebad','badstue','soverom','viltmat','fisker-hund','kast','hund-vann','tun-hund','skilt','bakstehus','kveld','tunet','taake','skog','roedvegg','folka','maar','fisker-bat'];
-  const tb=document.createElement('div');tb.className='edtb';tb.dataset.editUi='1';
-  tb.innerHTML='<button id="ed-on">Rediger siden</button>';document.body.appendChild(tb);
-  const msg=t=>{let m=document.getElementById('edmsg');if(!m){m=document.createElement('div');m.id='edmsg';m.className='edmsg';m.dataset.editUi='1';document.body.appendChild(m);}m.textContent=t;m.hidden=false;clearTimeout(m._t);m._t=setTimeout(()=>m.hidden=true,4000);};
-  const TXT='h1,h2,h3,p,li,figcaption,span.k,a.btn,.tlf,.rad .v,footer span,.aar b';
-  let on=false;
-  const start=()=>{on=true;document.body.classList.add('ed');
-    document.querySelectorAll(TXT).forEach(e=>{if(e.closest('[data-edit-ui]'))return;e.setAttribute('contenteditable','true');e.setAttribute('spellcheck','false');});
-    document.querySelectorAll('.ebl').forEach(b=>{const t=document.createElement('div');t.className='blk';t.dataset.editUi='1';t.style.cssText='top:6px;right:6px';
-      t.innerHTML='<button data-a="up" title="Flytt opp">▲</button><button data-a="down" title="Flytt ned">▼</button>'+(b.querySelector('img')?'<button data-a="img" title="Bytt bilde">Bilde</button>':'')+(cm?'<button data-a="cm" title="Kommenter">Merknad</button>':'')+'<button data-a="hide" title="Fjern">✕</button>';
-      t.onclick=async ev=>{const a=ev.target.dataset.a;if(!a)return;ev.preventDefault();
-        if(a==='up'&&b.previousElementSibling)b.parentNode.insertBefore(b,b.previousElementSibling);
-        if(a==='down'&&b.nextElementSibling)b.parentNode.insertBefore(b.nextElementSibling,b);
-        if(a==='hide'){b.remove();}
-        if(a==='img'){const im=b.querySelector('img');const cur=(im.getAttribute('src').match(/bilder\/(.+)\.jpg/)||[])[1];const i=bilder.indexOf(cur);im.src=''+bilder[(i+1)%bilder.length]+'.jpg';msg('Bilde: '+bilder[(i+1)%bilder.length]+' (klikk igjen for neste)');}
-        if(a==='cm'){try{await cm.openComposer({element:b});}catch(e){msg('Merknader er ikke tilgjengelig her');}}
-      };
-      b.appendChild(t);});
-    tb.innerHTML='<button id="ed-save" class="p">Lagre</button><button id="ed-cancel">Avbryt</button>';
-    document.getElementById('ed-save').onclick=save;document.getElementById('ed-cancel').onclick=()=>location.reload();
-    msg('Klikk i tekst for å skrive. ▲▼ flytter blokker, Bilde bytter foto, Merknad åpner kommentar. Lagre når du er ferdig.');
-  };
-  const save=async()=>{
-    const body=document.body.cloneNode(true);
-    body.querySelectorAll('[data-edit-ui],.blk,#edmsg').forEach(e=>e.remove());
-    body.querySelectorAll('[contenteditable]').forEach(e=>{e.removeAttribute('contenteditable');e.removeAttribute('spellcheck');});
-    body.classList.remove('ed');
-    body.querySelectorAll('.rv').forEach(e=>e.classList.remove('pre'));body.classList.remove('js');
-    body.querySelectorAll('.hist img,.sitat img,.vegg figure').forEach(e=>e.removeAttribute('style'));
-    body.querySelectorAll('.top').forEach(e=>e.classList.remove('fast'));
-    body.querySelectorAll('.hero .slides,.kar').forEach(k=>[...k.querySelectorAll('img')].forEach((e,i)=>e.classList.toggle('on',i===0)));
-    body.querySelectorAll('script:not([data-site])').forEach(e=>e.remove());
-    const keep=new Set(['TITLE','META','LINK','STYLE','HEADER','DIV','MAIN','FOOTER','SCRIPT']);
-    const parts=[...body.children].filter(e=>keep.has(e.tagName)&&!(e.tagName==='DIV'&&e.id!=='meny')).map(e=>e.outerHTML);
-    const html='<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif;background:#f8f8f6}img{max-width:100%}[hidden]{display:none!important}</style></head><body>'+parts.join('\n')+'</body></html>';
-    msg('Lagrer …');
-    try{await art.publish(html);}catch(e){if(e&&e.code==='conflict'){msg('Noen andre lagret nettopp. Siden lastes på nytt.');}else if(e&&(e.code==='not_writer'||e.code==='not_granted')){msg('Du kan ikke lagre her.');}else{msg('Kunne ikke lagre: '+(e&&e.code||'ukjent'));}}
-  };
-  document.getElementById('ed-on').onclick=start;
 })();
 </script>
 
