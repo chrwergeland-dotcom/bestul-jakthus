@@ -276,6 +276,58 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
   .filter button{font-size:.82rem;padding:11px 16px}
   .galleri .grid{column-gap:8px}
 }
+
+/* --- forespørsel --- */
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--fg);color:var(--hvit);border:0;border-radius:999px;padding:14px 20px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s,opacity .3s}
+.fab:hover{transform:translateY(-2px)}
+.fab.skjult{opacity:0;pointer-events:none}
+.sp{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center}
+.sp[hidden]{display:none}
+.sp-bak{position:absolute;inset:0;background:rgba(10,16,12,.55);backdrop-filter:blur(2px)}
+.sp-boks{position:relative;width:100%;max-width:560px;max-height:min(88vh,860px);display:flex;flex-direction:column;background:var(--bg);color:var(--fg);border-radius:18px 18px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.3);animation:sp-opp .3s cubic-bezier(.2,.7,.2,1)}
+@keyframes sp-opp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:761px){.sp{align-items:center;padding:24px}.sp-boks{border-radius:12px}}
+.sp-top{display:flex;align-items:center;gap:10px;padding:18px 20px 10px;border-bottom:1px solid var(--line)}
+.sp-top h2{flex:1;margin:0;font-size:1.25rem;letter-spacing:.06em;line-height:1.2}
+.sp-lukk,.sp-tilbake{all:unset;cursor:pointer;width:40px;height:40px;display:grid;place-items:center;font-size:1.6rem;line-height:1;border-radius:50%;color:var(--mute)}
+.sp-lukk:hover,.sp-tilbake:hover{background:var(--line);color:var(--fg)}
+.sp-innhold{padding:16px 20px 8px;overflow:auto;-webkit-overflow-scrolling:touch}
+.sp-fot{margin:0;padding:12px 20px calc(14px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:.9rem;color:var(--mute);text-align:center}
+.sp-fot a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+.sp-valg{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.sp-valg button{all:unset;cursor:pointer;display:flex;width:100%;box-sizing:border-box;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid var(--line);border-radius:10px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:1rem;background:#fff}
+.sp-valg button small{font-family:var(--serif);text-transform:none;letter-spacing:0;color:var(--mute);font-size:.9rem;display:block;font-weight:400;margin-top:2px}
+.sp-valg button:hover,.sp-valg button:focus-visible{border-color:var(--fg);outline:none}
+.sp-valg button::after{content:"›";font-size:1.4rem;color:var(--mute)}
+.sp-svar{font-size:1.02rem;line-height:1.55}
+.sp-svar p{margin:0 0 12px}
+.sp-svar .pris{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.sp-svar .pris b{font-family:var(--cond);font-weight:500;letter-spacing:.02em}
+.sp-svar .pris span{color:var(--rod);font-family:var(--cond)}
+.sp-lenke{display:inline-block;margin-top:14px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.84rem;padding:12px 18px;border:1px solid var(--fg);border-radius:999px;cursor:pointer;background:transparent;color:var(--fg)}
+.sp-lenke.full{background:var(--fg);color:var(--hvit)}
+.sp-form{display:grid;gap:14px}
+.sp-form label{display:grid;gap:6px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--mute)}
+.sp-form input,.sp-form textarea,.sp-form select{font:inherit;font-size:1.02rem;padding:12px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--fg);width:100%;box-sizing:border-box}
+.sp-form input:focus,.sp-form textarea:focus,.sp-form select:focus{outline:2px solid var(--fg);outline-offset:1px;border-color:var(--fg)}
+.sp-form .rad{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sp-form .tell{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:8px;background:#fff;width:max-content}
+.sp-form .tell button{all:unset;cursor:pointer;width:44px;height:46px;display:grid;place-items:center;font-size:1.3rem;color:var(--fg)}
+.sp-form .tell output{min-width:44px;text-align:center;font-size:1.1rem}
+.sp-form .chips{display:flex;flex-wrap:wrap;gap:8px}
+.sp-form .chips button{all:unset;cursor:pointer;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;background:#fff}
+.sp-form .chips button.on{background:var(--fg);color:var(--hvit);border-color:var(--fg)}
+.sp-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.sp-form .feil{color:var(--rod);font-size:.9rem;margin:0}
+.sp-form .pv{font-size:.82rem;color:var(--mute);margin:0}
+.sp-ok{text-align:center;padding:26px 6px}
+.sp-ok h3{font-family:var(--cond);font-weight:400;text-transform:uppercase;letter-spacing:.08em;font-size:1.5rem;margin:0 0 10px}
+.sp-ok p{color:var(--mute);margin:0 0 8px}
+.sp-ok .mrk{display:inline-block;width:56px;height:56px;border-radius:50%;border:2px solid var(--fg);display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px}
+.sp-opp{display:grid;gap:6px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:.95rem;margin-bottom:14px}
+.sp-opp b{font-family:var(--cond);font-weight:500;letter-spacing:.04em}
+@media (max-width:760px){.fab span{display:none}.fab{padding:16px;gap:0}.fab svg{width:22px;height:22px}}
+body.sp-apen{overflow:hidden}
 </style>
 </head>
 <body>
@@ -594,6 +646,18 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
   </div>
 </section>
 
+
+<!-- === Forespørsel: flytende knapp + panel === -->
+<button class="fab" id="sp-open" aria-haspopup="dialog" aria-controls="sp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span data-i18n="sp.fab">Send forespørsel</span></button>
+<div class="sp" id="sp" role="dialog" aria-modal="true" aria-labelledby="sp-t" hidden>
+  <div class="sp-bak" data-sp-close></div>
+  <div class="sp-boks">
+    <div class="sp-top"><button class="sp-tilbake" id="sp-back" type="button" hidden aria-label="Tilbake">‹</button><h2 id="sp-t" data-i18n="sp.h">Hva kan vi hjelpe med?</h2><button class="sp-lukk" type="button" data-sp-close aria-label="Lukk">×</button></div>
+    <div class="sp-innhold" id="sp-c"></div>
+    <p class="sp-fot"><span data-i18n="sp.fot">Haster det? Ring</span> <a href="tel:+4747338877">47 33 88 77</a></p>
+  </div>
+</div>
+
 </main>
 
 <footer>
@@ -645,7 +709,7 @@ e1:"The meeting room in the barn<span>projector, wifi, board, whiteboard and fli
 "g.p2":"Trout fishing in Økteren is what many come for. The lake is private – for the Løvenskiold family, the Løvenskiold Fossum staff and the guests at Bestul. At the fishing spot there are benches, tables, a grill and a fire pit, and two boats with electric motors lie ready. We have permits, barrier keys and simple tackle, and Laila can turn the catch into dinner the same evening.",
 "g.p3":"Back in the yard there is the sauna and the hot tub, and the fire pit is lit when it gets dark. If you want a competition we lend darts, air rifles, axes and milk pails; in winter our neighbour Tarjei can take you dog sledding. Dogs are of course welcome.","g.obs":"Several lakes in Luksefjell are regulated for hydropower. All access below regulation dams is prohibited, and the ice on regulated lakes must always be treated as unsafe.",
 "g.h":"Activities",
-"ga.h":"Gallery","ga.mer":"Show more photos","ga.p":"Tap a picture to see it large.","ga.f0":"All","ga.f1":"The house","ga.f3":"Food","ga.f4":"Nature",
+"ga.h":"Gallery","sp.fab":"Send a request","sp.h":"How can we help?","sp.fot":"In a hurry? Call","ga.mer":"Show more photos","ga.p":"Tap a picture to see it large.","ga.f0":"All","ga.f1":"The house","ga.f3":"Food","ga.f4":"Nature",
 g0:"The main house from 1892.",g1:"The yard at dusk, with the storehouse and the sauna.",g2:"The maple in front of the main house turns the yard yellow every October.",g3:"The sauna and hot tub stand on their own at the bottom of the yard.",g4:"The storehouse: meeting room by day, long table by night.",g5:"The bakehouse from the 1800s. 27 loaves a week in the early 1900s.",g6:"Old buildings and old forest, still standing.",g7:"Benches with hides by the fire pit in the yard.",g8:"The fireplace lounge upstairs, where the hunting parties sat.",g9:"The lounge. The trophies on the walls are from the Løvenskiold years.",g10:"The dining room, laid for three courses. The wallpaper is Gästgivars by Duro.",g11:"A corner of the dining room – Laila has built a bar here.",g12:"One of the ten rooms. Most have single beds; this one a double.",g13:"The long table in the storehouse, laid for a feast.",g14:"The hearth in the bakehouse is still in use.",g15:"The sauna in the yard.",g16:"The hot tub, out under the stars.",g17:"The marten in the kitchen keeps an eye on breakfast.",g18:"Nicole, Laila and Debbie outside the bakehouse.",g19:"Game dinner in the storehouse. Game from local hunters is often on the menu.",g20:"Sourdough from the bakehouse, baked by Debbie and Bård.",g21:"Home-made and local: bread, crowfoot, chestnuts and cones on the table.",g22:"The forest's gold: chanterelles and ceps from nearby.",g23:"Laila's sunshine buns, the guests' favourite.",g24:"Økteren, 469 m above sea level. Private lake with boat and permit.",g25:"The view over Luksefjell from the neighbouring summer farm.",g26:"Bestultjønn in autumn.",g27:"The hillside above the yard.",g28:"Fog over the forest early in the morning.",g30:"The forest around Bestul – Løvenskiold's since 1734.",g31:"Evening cast on Økteren.",g32:"Catch of the day. Laila turns it into dinner the same evening.",g33:"Two good friends hunting for supper.",g34:"The boat is ready for guests.",g35:"Dogs are of course welcome.",g36:"A break on the hay bales in the yard.",g37:"Dog and guest in front of the main house.",g38:"Løvenskiold's old sign by the lake. We have the key.",
 g39:"Bestul from the air: the barn, the main house, the storehouse and the bakehouse.",g40:"The yard from above, with the King's Road passing by.",g41:"Evening sky over Bestul.",g42:"Økteren from the air. Private lake, 469 m above sea level.",g43:"Morning fog in the forest.",g44:"Spruce top in fog.",g45:"The clouds lift over the ridge.",g46:"The view from the yard after rain.",g47:"Luksefjell in grey weather.",
 "k.k":"Call or write","k.e":"Email","k.a":"Address","k.s":"Follow","k.n":"We tailor every stay, because we know no two occasions are alike. Get in touch by email or phone.",
@@ -707,6 +771,91 @@ addEventListener('keydown',e=>{if(lys.hidden)return;if(e.key==='Escape')hide();i
   const par=()=>{tick=false;const h=innerHeight;bands.forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>h)return;const p=(r.top+r.height/2-h/2)/h;im.style.transform=`translate3d(0,${(p*-7).toFixed(2)}%,0) scale(1.14)`;});};
   addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(par);}},{passive:true});par();
 })();
+
+/* --- forespørsel (FAQ + skjema) --- */
+(()=>{
+const W3_KEY='';  /* Web3Forms access key – fylles inn når Laila har bekreftet e-posten sin */
+const TIL='laila@bestuljakthus.com';
+const sp=document.getElementById('sp'),c=document.getElementById('sp-c'),fab=document.getElementById('sp-open'),back=document.getElementById('sp-back'),tit=document.getElementById('sp-t');
+if(!sp)return;
+const no=()=>document.documentElement.lang!=='en';
+const T2={
+ no:{h:'Hva kan vi hjelpe med?',kat:'Hva gjelder det?',faq:'Rask info',sporr:'Når og hvor mange?',deg:'Hvem skal vi svare?',send:'Send forespørsel',ikkesvar:'Fikk du ikke svar? Spør Laila',videre:'Send en forespørsel',ok:'Takk!',okp:'Laila svarer vanligvis innen en dag.',okp2:'Haster det, ring 47 33 88 77.',fra:'Fra',til:'Til',pers:'Antall personer',vet:'Vet ikke ennå',navn:'Navn',tlf:'Telefon',ep:'E-post',mld:'Noe mer vi bør vite? (valgfritt)',pv:'Opplysningene brukes bare til å svare deg, og lagres ikke andre steder enn i Lailas e-post.',feil:'Fyll inn navn og telefon eller e-post.',sender:'Sender …',nett:'Fikk ikke sendt. Prøv igjen, eller ring 47 33 88 77.',anl:'Anledning',over:'Overnatting?',dag:'Dagmøte',natt:'Med overnatting',opps:'Oppsummering'},
+ en:{h:'How can we help?',kat:'What is it about?',faq:'Quick answers',sporr:'When, and how many?',deg:'Who should we reply to?',send:'Send request',ikkesvar:'Still a question? Ask Laila',videre:'Send a request',ok:'Thank you!',okp:'Laila usually replies within a day.',okp2:'In a hurry? Call +47 47 33 88 77.',fra:'From',til:'To',pers:'Number of people',vet:'Not sure yet',navn:'Name',tlf:'Phone',ep:'Email',mld:'Anything else we should know? (optional)',pv:'Your details are used only to reply to you, and are stored nowhere but in Laila’s inbox.',feil:'Please add your name and a phone number or email.',sender:'Sending …',nett:'Could not send. Try again or call +47 47 33 88 77.',anl:'Occasion',over:'Overnight?',dag:'Day meeting',natt:'With overnight stay',opps:'Summary'}
+};
+const t=k=>(no()?T2.no:T2.en)[k];
+const KAT=[
+ {id:'overnatting',no:'Overnatting',en:'Accommodation',sub:{no:'Rom, helg, familie, venner',en:'Rooms, weekends, family, friends'}},
+ {id:'kurs',no:'Kurs og event',en:'Courses & events',sub:{no:'Møte, samling, teambuilding',en:'Meetings, gatherings, teambuilding'}},
+ {id:'fest',no:'Mat, selskap og fest',en:'Food, parties & celebrations',sub:{no:'Sommerfest, julebord, bryllup',en:'Summer party, Christmas, weddings'}},
+ {id:'fiske',no:'Ørretfiske',en:'Trout fishing',sub:{no:'Økteren, båt, fiskekort',en:'Økteren, boats, permits'}},
+ {id:'annet',no:'Annet',en:'Something else',sub:{no:'Spørsmål, hilsen, samarbeid',en:'Questions, greetings, partnerships'}}
+];
+const FAQ={
+ priser:{no:'Hva koster det?',en:'What does it cost?',svar:{no:'<p>Pakkepriser per person, kurs og event:</p><div class="pris"><b>Møte og overnatting</b><span>2 500</span></div><div class="pris"><b>Lunsj til lunsj</b><span>3 200</span></div><div class="pris"><b>Ørretfiske i Økteren</b><span>3 200</span></div><p style="margin-top:12px">Private opphold, selskap og hele huset prises etter antall og ønsker – send en forespørsel, så får du et konkret tilbud.</p>',en:'<p>Package prices per person, courses and events:</p><div class="pris"><b>Meeting and overnight</b><span>2 500</span></div><div class="pris"><b>Lunch to lunch</b><span>3 200</span></div><div class="pris"><b>Trout fishing in Økteren</b><span>3 200</span></div><p style="margin-top:12px">Private stays, parties and the whole house are priced by numbers and wishes – send a request and you will get a concrete offer.</p>'}},
+ plass:{no:'Hvor mange kan dere ta imot?',en:'How many can you host?',svar:{no:'<p>Tjue senger i ti rom: sju i hovedhuset og tre i Brygger’n tvers over tunet. Møterom i låven, langbord i spisestua og i stabburet. Til selskap uten overnatting tar vi flere – si hvor mange dere er.</p>',en:'<p>Twenty beds in ten rooms: seven in the main house and three in Brygger’n across the yard. Meeting room in the barn, long tables in the dining room and the storehouse. For parties without overnight stays we take more – tell us how many.</p>'}},
+ vei:{no:'Hvordan kommer vi dit?',en:'How do we get there?',svar:{no:'<p>Bestulvegen 570, 3721 Skien. Kjør nordover fra Skien mot Luksefjell, langs fjellvann og skog, i omtrent førti minutter. Bomvei siste stykket – vi har nøkkel til gjestene våre.</p><a class="sp-lenke" href="https://www.google.com/maps/search/?api=1&query=Bestulvegen+570,+3721+Skien" target="_blank" rel="noopener">Åpne i kart</a>',en:'<p>Bestulvegen 570, 3721 Skien. Drive north from Skien towards Luksefjell, past lakes and forest, about forty minutes. Toll road for the last stretch – we have keys for our guests.</p><a class="sp-lenke" href="https://www.google.com/maps/search/?api=1&query=Bestulvegen+570,+3721+Skien" target="_blank" rel="noopener">Open in maps</a>'}},
+ mat:{no:'Hva med maten – og allergier?',en:'What about food and allergies?',svar:{no:'<p>Alt lages på huset av det skogen og vannet gir: ørret fra Økteren, vilt, sopp og bær i sesong. Frokost, niste og tre retter om kvelden. Allergier og ønsker tar vi på telefonen – det løser vi alltid.</p>',en:'<p>Everything is made in-house from what the forest and the lake provide: trout from Økteren, game, mushrooms and berries in season. Breakfast, packed lunch and three courses in the evening. Allergies and wishes we sort out by phone – always.</p>'}},
+ fasil:{no:'Badstue, boblebad og båt?',en:'Sauna, hot tub and boats?',svar:{no:'<p>Ja. Badstue og boblebad står på tunet, bålpanna tennes når det mørkner. Ved Økteren ligger to båter med elmotor, og vi har fiskekort, bomnøkkel og enkelt fiskeutstyr. Møterommet i låven har prosjektor, wifi og tavle.</p>',en:'<p>Yes. Sauna and hot tub in the yard, the fire pit is lit after dark. At Økteren there are two boats with electric motors, and we have fishing permits, toll keys and basic gear. The meeting room in the barn has a projector, wifi and whiteboard.</p>'}},
+ hund:{no:'Kan vi ha med hund?',en:'Can we bring a dog?',svar:{no:'<p>Ja, selvfølgelig.</p>',en:'<p>Yes, of course.</p>'}}
+};
+const FAQ_KAT={overnatting:['priser','plass','vei','mat','fasil','hund'],kurs:['priser','plass','fasil','mat','vei'],fest:['plass','mat','priser','vei'],fiske:['fasil','priser','vei','hund'],annet:['vei','plass','mat','hund']};
+let st={steg:0,kat:null,fra:'',til:'',pers:0,anl:'',over:'',navn:'',tlf:'',ep:'',mld:''};
+const stack=[];
+const esc=v=>String(v).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+function vis(h,title){tit.textContent=title;c.innerHTML=h;back.hidden=stack.length===0;c.scrollTop=0;const f=c.querySelector('button,input,a');if(f&&matchMedia('(min-width:761px)').matches)f.focus();}
+function go(fn,...a){stack.push(fn.bind(null,...a));fn(...a);}
+function s1(){stack.length=0;vis('<ul class="sp-valg">'+KAT.map(k=>`<li><button type="button" data-k="${k.id}"><span>${no()?k.no:k.en}<small>${no()?k.sub.no:k.sub.en}</small></span></button></li>`).join('')+'</ul>',t('kat'));
+ c.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{st.kat=b.dataset.k;go(s2);});}
+function s2(){const ks=FAQ_KAT[st.kat]||[];const kn=KAT.find(k=>k.id===st.kat);
+ vis('<ul class="sp-valg">'+ks.map(k=>`<li><button type="button" data-f="${k}"><span>${no()?FAQ[k].no:FAQ[k].en}</span></button></li>`).join('')+`<li><button type="button" class="full" data-f="__send" style="background:var(--fg);color:var(--hvit);border-color:var(--fg)"><span>${t('videre')}<small style="color:rgba(247,246,242,.7)">${no()?kn.no:kn.en}</small></span></button></li></ul>`,t('faq'));
+ c.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{const f=b.dataset.f;if(f==='__send')go(s3);else go(sFaq,f);});}
+function sFaq(k){vis(`<div class="sp-svar">${no()?FAQ[k].svar.no:FAQ[k].svar.en}<p><button type="button" class="sp-lenke full" id="sp-videre">${t('ikkesvar')} ›</button></p></div>`,no()?FAQ[k].no:FAQ[k].en);
+ document.getElementById('sp-videre').onclick=()=>go(s3);}
+function s3(){const kurs=st.kat==='kurs',fest=st.kat==='fest';
+ vis(`<div class="sp-form">
+  <div class="rad"><label>${t('fra')}<input type="date" id="f-fra" value="${esc(st.fra)}"></label><label>${t('til')}<input type="date" id="f-til" value="${esc(st.til)}"></label></div>
+  <label>${t('pers')}<div class="tell"><button type="button" id="f-min" aria-label="−">−</button><output id="f-pers">${st.pers||t('vet')}</output><button type="button" id="f-pluss" aria-label="+">+</button></div></label>
+  ${kurs?`<label>${t('over')}<div class="chips"><button type="button" data-o="dag" class="${st.over==='dag'?'on':''}">${t('dag')}</button><button type="button" data-o="natt" class="${st.over==='natt'?'on':''}">${t('natt')}</button></div></label>`:''}
+  ${fest?`<label>${t('anl')}<input type="text" id="f-anl" value="${esc(st.anl)}" placeholder="${no()?'f.eks. 50-årsdag, julebord':'e.g. birthday, Christmas party'}"></label>`:''}
+  <p><button type="button" class="sp-lenke full" id="f-neste">${t('deg')} ›</button></p></div>`,t('sporr'));
+ const o=document.getElementById('f-pers');const setP=n=>{st.pers=Math.max(0,Math.min(200,n));o.textContent=st.pers||t('vet');};
+ document.getElementById('f-min').onclick=()=>setP(st.pers-1);document.getElementById('f-pluss').onclick=()=>setP(st.pers+1);
+ c.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{st.over=b.dataset.o;c.querySelectorAll('[data-o]').forEach(x=>x.classList.toggle('on',x===b));});
+ document.getElementById('f-neste').onclick=()=>{st.fra=document.getElementById('f-fra').value;st.til=document.getElementById('f-til').value;const a=document.getElementById('f-anl');if(a)st.anl=a.value.trim();go(s4);};}
+const dn=v=>v?v.split('-').reverse().join('.'):'';
+function opps(){const kn=KAT.find(k=>k.id===st.kat);const d=st.fra?(dn(st.fra)+(st.til&&st.til!==st.fra?' – '+dn(st.til):'')):'';
+ return [[no()?'Gjelder':'About',no()?kn.no:kn.en],[no()?'Dato':'Dates',d],[no()?'Antall':'People',st.pers||''],[t('over').replace('?',''),st.over?t(st.over):''],[t('anl'),st.anl]].filter(x=>x[1]);}
+function s4(){vis(`<form class="sp-form" id="f" novalidate>
+  <div class="sp-opp">${opps().map(([k,v])=>`<div><b>${esc(k)}:</b> ${esc(v)}</div>`).join('')}</div>
+  <label>${t('navn')}<input type="text" id="f-navn" autocomplete="name" value="${esc(st.navn)}" required></label>
+  <div class="rad"><label>${t('tlf')}<input type="tel" id="f-tlf" autocomplete="tel" value="${esc(st.tlf)}"></label><label>${t('ep')}<input type="email" id="f-ep" autocomplete="email" value="${esc(st.ep)}"></label></div>
+  <label>${t('mld')}<textarea id="f-mld" rows="3">${esc(st.mld)}</textarea></label>
+  <input class="hp" type="text" name="botcheck" tabindex="-1" autocomplete="off">
+  <p class="feil" id="f-feil" hidden></p>
+  <p><button type="submit" class="sp-lenke full" id="f-send">${t('send')}</button></p>
+  <p class="pv">${t('pv')}</p></form>`,t('deg'));
+ document.getElementById('f').onsubmit=async e=>{e.preventDefault();
+  st.navn=document.getElementById('f-navn').value.trim();st.tlf=document.getElementById('f-tlf').value.trim();st.ep=document.getElementById('f-ep').value.trim();st.mld=document.getElementById('f-mld').value.trim();
+  const feil=document.getElementById('f-feil');
+  if(!st.navn||(!st.tlf&&!st.ep)){feil.textContent=t('feil');feil.hidden=false;return;}
+  if(c.querySelector('.hp').value)return;
+  feil.hidden=true;const btn=document.getElementById('f-send');btn.disabled=true;btn.textContent=t('sender');
+  const kn=KAT.find(k=>k.id===st.kat);const emne=`Forespørsel: ${kn.no}${st.fra?', '+dn(st.fra)+(st.til&&st.til!==st.fra?'–'+dn(st.til):''):''}${st.pers?', '+st.pers+' pers':''} – ${st.navn}`;
+  const linjer=opps().map(([k,v])=>k+': '+v).concat([st.mld?'Melding: '+st.mld:'','','Navn: '+st.navn,'Telefon: '+(st.tlf||'–'),'E-post: '+(st.ep||'–'),'','Sendt fra bestuljakthus.com '+new Date().toLocaleString('nb-NO')]).filter(x=>x!==undefined);
+  const body=linjer.join('\n');
+  if(W3_KEY){try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:W3_KEY,subject:emne,from_name:'Bestul Jakthus – nettsiden',name:st.navn,email:st.ep||undefined,replyto:st.ep||undefined,phone:st.tlf,message:body,botcheck:''})});const j=await r.json();if(!j.success)throw 0;sOk();return;}catch(x){/* faller tilbake til e-postapp */}}
+  location.href='mailto:'+TIL+'?subject='+encodeURIComponent(emne)+'&body='+encodeURIComponent(body);
+  sOk();};}
+function sOk(){stack.length=0;vis(`<div class="sp-ok"><div class="mrk">✓</div><h3>${t('ok')}</h3><p>${t('okp')}</p><p>${t('okp2')}</p></div>`,'');st={steg:0,kat:null,fra:'',til:'',pers:0,anl:'',over:'',navn:'',tlf:'',ep:'',mld:''};}
+function open(){sp.hidden=false;document.body.classList.add('sp-apen');fab.classList.add('skjult');s1();}
+function close(){sp.hidden=true;document.body.classList.remove('sp-apen');fab.classList.remove('skjult');fab.focus();}
+fab.onclick=open;sp.querySelectorAll('[data-sp-close]').forEach(b=>b.onclick=close);
+back.onclick=()=>{stack.pop();const f=stack[stack.length-1];if(f)f();else s1();};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!sp.hidden)close();});
+document.querySelectorAll('a[href="#kontakt"]').forEach(a=>{a.addEventListener('click',e=>{/* behold vanlig navigasjon */});});
+})();
+
 </script>
 
 </body>
