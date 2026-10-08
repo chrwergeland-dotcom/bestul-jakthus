@@ -242,6 +242,28 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 .lys .lukk{top:10px;right:14px}.lys .pil{top:50%;transform:translateY(-50%)}#lys-f{left:6px}#lys-n{right:6px}
 
 /* fargetonen ("LUT") er bakt inn i bildefilene */
+
+/* --- mobil: lesbarhet og synlig meny --- */
+.top:not(.fast)::before{content:"";position:absolute;inset:0;height:130px;background:linear-gradient(rgba(8,12,9,.55),rgba(8,12,9,0));pointer-events:none}
+.top:not(.fast) .wrap{text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.top .wrap{z-index:1}
+.burger{display:none;align-items:center;gap:10px;font-size:.92rem;padding:10px 0}
+.burger::before{content:"";width:22px;height:2px;background:currentColor;box-shadow:0 -7px 0 currentColor,0 7px 0 currentColor}
+.lang button{opacity:.75;padding:8px 10px}
+@media (max-width:760px){
+  .burger{display:flex}
+  body{font-size:1.12rem;line-height:1.55}
+  .mark{font-size:1rem;letter-spacing:.24em}
+  .lang{font-size:.85rem}
+  .hero p{font-size:1.1rem}
+  .ingress{font-size:1.1rem}
+  .kort p,.tk p,.mat p,.akt p,#aktiviteter p,#mat p,#kurs p,#kurs li{font-size:1.05rem}
+  small,.kort small,.tk small{font-size:.9rem}
+  .kort h3{font-size:1.05rem}
+  .liste dt,.liste dd{font-size:1rem}
+  #kontakt a,#kontakt p{font-size:1.1rem}
+  footer,footer p,footer small{font-size:.9rem}
+}
 </style>
 </head>
 <body>
@@ -633,7 +655,7 @@ document.querySelectorAll('.hero .slides,.kar').forEach(k=>{const im=[...k.query
 
 /* --- tidslinje --- */
 (()=>{const tr=document.querySelector('.tl-track');if(!tr)return;const ks=[...tr.querySelectorAll('.tk')],bs=[...document.querySelectorAll('.tl-aar button')],tell=document.getElementById('tl-tell');let cur=-1,auto,touched=false;
-const set=i=>{if(i===cur)return;cur=i;ks.forEach((k,j)=>k.classList.toggle('on',j===i));bs.forEach((b,j)=>b.classList.toggle('on',j===i));tell.textContent=(i+1)+' / '+ks.length;const b=bs[i];if(b)b.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});};
+const set=i=>{if(i===cur)return;cur=i;ks.forEach((k,j)=>k.classList.toggle('on',j===i));bs.forEach((b,j)=>b.classList.toggle('on',j===i));tell.textContent=(i+1)+' / '+ks.length;const b=bs[i];if(b){const pa=b.parentElement;pa.scrollTo({left:b.offsetLeft-(pa.clientWidth-b.offsetWidth)/2,behavior:'smooth'});}};
 const go=i=>{i=(i+ks.length)%ks.length;tr.scrollTo({left:ks[i].offsetLeft,behavior:'smooth'});set(i);};
 let t;tr.addEventListener('scroll',()=>{clearTimeout(t);t=setTimeout(()=>set(Math.round(tr.scrollLeft/tr.clientWidth)),80);},{passive:true});
 bs.forEach(b=>b.addEventListener('click',()=>{touched=true;go(+b.dataset.i);}));
