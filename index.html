@@ -328,6 +328,16 @@ body.ed .ebl{position:relative;outline:1px solid rgba(158,58,43,.25)}
 .sp-opp b{font-family:var(--cond);font-weight:500;letter-spacing:.04em}
 @media (max-width:760px){.fab span{display:none}.fab{padding:16px;gap:0}.fab svg{width:22px;height:22px}}
 body.sp-apen{overflow:hidden}
+
+.sp-valg a.prim,.sp-valg button.prim2{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:10px;text-decoration:none;color:inherit;font-family:var(--cond);text-transform:uppercase;letter-spacing:.1em;font-size:1.05rem;cursor:pointer;box-sizing:border-box;width:100%}
+.sp-valg a.prim{border:1px solid var(--fg);background:#fff}
+.sp-valg a.prim::after{content:"☏";font-size:1.3rem}
+.sp-valg button.prim2{background:var(--fg);color:var(--hvit);border-color:var(--fg)}
+.sp-valg button.prim2 small,.sp-valg a.prim small{font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:.9rem;display:block;margin-top:2px;opacity:.8}
+.sp-faqh{margin:22px 0 10px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--mute)}
+.sp-chips{display:flex;flex-wrap:wrap;gap:8px}
+.sp-chips button{all:unset;cursor:pointer;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-family:var(--serif);font-size:.95rem;background:#fff}
+.sp-chips button:hover{border-color:var(--fg)}
 </style>
 </head>
 <body>
@@ -805,13 +815,22 @@ const stack=[];
 const esc=v=>String(v).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
 function vis(h,title){tit.textContent=title;c.innerHTML=h;back.hidden=stack.length===0;c.scrollTop=0;const f=c.querySelector('button,input,a');if(f&&matchMedia('(min-width:761px)').matches)f.focus();}
 function go(fn,...a){stack.push(fn.bind(null,...a));fn(...a);}
-function s1(){stack.length=0;vis('<ul class="sp-valg">'+KAT.map(k=>`<li><button type="button" data-k="${k.id}"><span>${no()?k.no:k.en}<small>${no()?k.sub.no:k.sub.en}</small></span></button></li>`).join('')+'</ul>',t('kat'));
- c.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{st.kat=b.dataset.k;go(s2);});}
+function s1(){stack.length=0;st.kat=null;
+ vis(`<ul class="sp-valg">
+  <li><a class="prim" href="tel:+4747338877"><span>${no()?'Ring Laila':'Call Laila'}<small>47 33 88 77 · ${no()?'raskest':'fastest'}</small></span></a></li>
+  <li><button type="button" id="sp-send" class="prim2"><span>${t('videre')}<small>${no()?'Datoer, antall, hva dere ønsker – Laila svarer innen en dag':'Dates, numbers, wishes – Laila replies within a day'}</small></span></button></li>
+ </ul>
+ <p class="sp-faqh">${t('faq')}</p>
+ <div class="chips sp-chips">${['priser','plass','vei','mat','fasil','hund'].map(k=>`<button type="button" data-f="${k}">${no()?FAQ[k].no:FAQ[k].en}</button>`).join('')}</div>`,t('h'));
+ document.getElementById('sp-send').onclick=()=>go(s1b);
+ c.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{st.kat=st.kat||'annet';go(sFaq,b.dataset.f);});}
+function s1b(){vis('<ul class="sp-valg">'+KAT.map(k=>`<li><button type="button" data-k="${k.id}"><span>${no()?k.no:k.en}<small>${no()?k.sub.no:k.sub.en}</small></span></button></li>`).join('')+'</ul>',t('kat'));
+ c.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{st.kat=b.dataset.k;go(s3);});}
 function s2(){const ks=FAQ_KAT[st.kat]||[];const kn=KAT.find(k=>k.id===st.kat);
  vis('<ul class="sp-valg">'+ks.map(k=>`<li><button type="button" data-f="${k}"><span>${no()?FAQ[k].no:FAQ[k].en}</span></button></li>`).join('')+`<li><button type="button" class="full" data-f="__send" style="background:var(--fg);color:var(--hvit);border-color:var(--fg)"><span>${t('videre')}<small style="color:rgba(247,246,242,.7)">${no()?kn.no:kn.en}</small></span></button></li></ul>`,t('faq'));
  c.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{const f=b.dataset.f;if(f==='__send')go(s3);else go(sFaq,f);});}
 function sFaq(k){vis(`<div class="sp-svar">${no()?FAQ[k].svar.no:FAQ[k].svar.en}<p><button type="button" class="sp-lenke full" id="sp-videre">${t('ikkesvar')} ›</button></p></div>`,no()?FAQ[k].no:FAQ[k].en);
- document.getElementById('sp-videre').onclick=()=>go(s3);}
+ document.getElementById('sp-videre').onclick=()=>go(st.kat&&st.kat!=='annet'?s3:s1b);}
 function s3(){const kurs=st.kat==='kurs',fest=st.kat==='fest';
  vis(`<div class="sp-form">
   <div class="rad"><label>${t('fra')}<input type="date" id="f-fra" value="${esc(st.fra)}"></label><label>${t('til')}<input type="date" id="f-til" value="${esc(st.til)}"></label></div>
