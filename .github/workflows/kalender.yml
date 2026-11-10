@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Hent opptatte datoer fra Google-kalenderen
         env:
-          KALENDER_ICS: ${{ vars.KALENDER_ICS }}
+          KALENDER_ICS: ${{ secrets.KALENDER_ICS || vars.KALENDER_ICS }}
         run: python3 .github/kalender.py
       - name: Lagre hvis endret
         run: |
