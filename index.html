@@ -22,6 +22,27 @@
 @font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(lora-latin-400-normal.woff2) format('woff2')}
 @font-face{font-family:'Lora';font-style:normal;font-weight:500;font-display:swap;src:url(lora-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'Lora';font-style:italic;font-weight:400;font-display:swap;src:url(lora-latin-400-italic.woff2) format('woff2')}
+
+/* --- kalender: ledig/opptatt --- */
+.kal{padding-block:clamp(64px,9vw,120px);border-top:1px solid var(--line)}
+.kal .ing{color:var(--mute);font-style:italic;max-width:34em}
+.kal-nav{display:flex;align-items:center;gap:10px}
+.kal-nav button{font:inherit;background:none;border:1px solid var(--line);color:var(--fg);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1.3rem;line-height:1}
+.kal-nav button:disabled{opacity:.3;cursor:default}
+.kal-mnd{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.kal-m h3{font-family:var(--cond);font-weight:400;text-transform:uppercase;letter-spacing:.14em;font-size:1rem;margin-bottom:12px}
+.kal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.kal-g .u{font-family:var(--cond);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:center;padding-bottom:4px}
+.kal-g .kd{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font:inherit;font-size:.95rem;border:1px solid var(--line);background:#fff;color:var(--fg);border-radius:4px;padding:0;cursor:pointer;position:relative}
+.kal-g .kd:hover,.kal-g .kd:focus-visible{border-color:var(--fg);outline:none}
+.kal-g .kd.opt{background:repeating-linear-gradient(135deg,#ece9e1 0 6px,#e3dfd5 6px 12px);color:var(--mute);text-decoration:line-through;cursor:default;border-color:transparent}
+.kal-g .kd.forbi{background:none;border-color:transparent;color:#b9bab4;cursor:default}
+.kal-g .kd.idag{box-shadow:inset 0 0 0 2px var(--rod)}
+.kal-fot{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin-top:22px;color:var(--mute);font-size:.9rem}
+.kal-fot i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--line);background:#fff}
+.kal-fot i.o{border-color:transparent;background:repeating-linear-gradient(135deg,#ece9e1 0 3px,#e3dfd5 3px 6px)}
+.kal-fot .oppd{margin-left:auto;font-size:.8rem}
+@media (max-width:760px){.kal-mnd{grid-template-columns:1fr}.kal-m+.kal-m{display:none}.kal-fot .oppd{margin-left:0;width:100%}}
 </style>
 <meta name="description" content="Bestul Jakthus, Luksefjell. Overnatting, hjemmelagd mat, ørretfiske, badstue og boblebad. Ring 47 33 88 77.">
 <style>
@@ -363,6 +384,7 @@ body.sp-apen{overflow:hidden}
       <a href="#mat" data-i18n="n4">Mat og drikke</a>
       <a href="#aktiviteter" data-i18n="n5">Aktiviteter</a>
       <a href="#galleri" data-i18n="n8">Galleri</a>
+      <a href="#kalender" class="kal-lenke" data-i18n="n9" hidden>Kalender</a>
     </nav>
     <div style="display:flex;align-items:center;gap:18px">
       <div class="lang" role="group" aria-label="Språk">
@@ -381,6 +403,7 @@ body.sp-apen{overflow:hidden}
   <a href="#mat" onclick="meny.hidden=true" data-i18n="n4">Mat og drikke</a>
   <a href="#aktiviteter" onclick="meny.hidden=true" data-i18n="n5">Aktiviteter</a>
   <a href="#galleri" onclick="meny.hidden=true" data-i18n="n8">Galleri</a>
+  <a href="#kalender" class="kal-lenke" onclick="meny.hidden=true" data-i18n="n9" hidden>Kalender</a>
   <a href="#kontakt" onclick="meny.hidden=true" data-i18n="n7">Kontakt</a>
 </div>
 
@@ -645,6 +668,15 @@ body.sp-apen{overflow:hidden}
 </section>
 <div class="lys" id="lys" hidden><button class="lukk" id="lys-lukk" aria-label="Lukk">×</button><button class="pil" id="lys-f" aria-label="Forrige">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="pil" id="lys-n" aria-label="Neste">›</button></div>
 
+<section class="kal ebl" id="kalender" hidden>
+  <div class="wrap">
+    <div class="hode"><h2 data-i18n="ka.h">Ledige datoer</h2><div class="kal-nav"><button type="button" id="kal-f" aria-label="Forrige måned">‹</button><button type="button" id="kal-n" aria-label="Neste måned">›</button></div></div>
+    <p class="ing" data-i18n="ka.p" style="margin:-12px 0 28px">Skraverte datoer er reservert. Trykk på en ledig dato for å sende Laila en forespørsel.</p>
+    <div class="kal-mnd" id="kal-mnd"></div>
+    <div class="kal-fot"><span><i></i><span data-i18n="ka.l">Ledig</span></span><span><i class="o"></i><span data-i18n="ka.o">Reservert</span></span><span class="oppd" id="kal-oppd"></span></div>
+  </div>
+</section>
+
 <section class="kontakt rv ebl" id="kontakt">
   <div class="wrap">
     <span class="k s" data-i18n="k.k">Ring eller skriv</span>
@@ -683,6 +715,7 @@ body.sp-apen{overflow:hidden}
 
 <script data-site>
 const T={en:{
+"n9":"Calendar","ka.h":"Available dates","ka.p":"Shaded dates are booked. Tap a free date to send Laila a request.","ka.l":"Available","ka.o":"Booked",
 n0:"Menu",n6:"Close",n1:"History",n2:"Stay",n3:"Courses & events",n4:"Food & drink",n5:"Activities",n7:"Contact",n8:"Gallery",
 "h.k":"Bestul hunting lodge · Luksefjell, Norway · since 1611","h.h1":"A little house in the forest, please","h.p":"Rooms, home-cooked food, trout fishing, sauna and hot tub. The whole house to yourselves, forty minutes from Skien.","h.b1":"Call +47 47 33 88 77",
 "i.p":"Drive north from Skien towards Luksefjell,<br>past mountain lakes and towering forest,<br>until you think you have gone too far.<br>Then a little further.<small>That is how Laila describes the road up.</small>","i.s":"That is how Laila describes the road up.",
@@ -871,12 +904,44 @@ function s4(){vis(`<form class="sp-form" id="f" novalidate>
 function sOk(){stack.length=0;vis(`<div class="sp-ok"><div class="mrk">✓</div><h3>${t('ok')}</h3><p>${t('okp')}</p><p>${t('okp2')}</p></div>`,'');st={steg:0,kat:null,fra:'',til:'',pers:0,anl:'',over:'',navn:'',tlf:'',ep:'',mld:''};}
 function open(){sp.hidden=false;document.body.classList.add('sp-apen');fab.classList.add('skjult');s1();}
 function close(){sp.hidden=true;document.body.classList.remove('sp-apen');fab.classList.remove('skjult');fab.focus();}
-fab.onclick=open;sp.querySelectorAll('[data-sp-close]').forEach(b=>b.onclick=close);
+fab.onclick=open;
+window.spDato=(fra,til)=>{st.fra=fra;st.til=til||'';open();go(s1b);};sp.querySelectorAll('[data-sp-close]').forEach(b=>b.onclick=close);
 back.onclick=()=>{stack.pop();const f=stack[stack.length-1];if(f)f();else s1();};
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!sp.hidden)close();});
 document.querySelectorAll('a[href="#kontakt"]').forEach(a=>{a.addEventListener('click',e=>{/* behold vanlig navigasjon */});});
 })();
 
+
+/* --- kalender: henter opptatt.json (generert fra Lailas Google-kalender) --- */
+(()=>{
+const sek=document.getElementById('kalender');if(!sek)return;
+const box=document.getElementById('kal-mnd'),bf=document.getElementById('kal-f'),bn=document.getElementById('kal-n'),oppd=document.getElementById('kal-oppd');
+const MN={no:['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'],en:['January','February','March','April','May','June','July','August','September','October','November','December']};
+const UD={no:['ma','ti','on','to','fr','lø','sø'],en:['Mo','Tu','We','Th','Fr','Sa','Su']};
+const en=()=>document.documentElement.lang==='en';
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const idag=new Date();idag.setHours(0,0,0,0);
+const start=new Date(idag.getFullYear(),idag.getMonth(),1);
+let off=0,opt=new Set(),data=null;const MAKS=17;
+function mnd(y,m){const l=en()?'en':'no';const f=new Date(y,m,1),n=new Date(y,m+1,0).getDate(),pad=(f.getDay()+6)%7;
+ let g=UD[l].map(u=>`<span class="u">${u}</span>`).join('')+'<span></span>'.repeat(pad);
+ for(let d=1;d<=n;d++){const dt=new Date(y,m,d),k=iso(dt),forbi=dt<idag,o=opt.has(k);
+  const cls='kd'+(forbi?' forbi':o?' opt':'')+(dt.getTime()===idag.getTime()?' idag':'');
+  const lab=d+'. '+MN[l][m]+(o?(en()?', booked':', reservert'):forbi?'':(en()?', available':', ledig'));
+  g+=(forbi||o)?`<span class="${cls}" aria-label="${lab}">${d}</span>`:`<button type="button" class="${cls}" data-d="${k}" aria-label="${lab}">${d}</button>`;}
+ return `<div class="kal-m"><h3>${MN[l][m]} ${y}</h3><div class="kal-g">${g}</div></div>`;}
+function tegn(){const a=new Date(start.getFullYear(),start.getMonth()+off,1),b=new Date(a.getFullYear(),a.getMonth()+1,1);
+ box.innerHTML=mnd(a.getFullYear(),a.getMonth())+mnd(b.getFullYear(),b.getMonth());
+ bf.disabled=off<=0;bn.disabled=off>=MAKS;
+ box.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{const d=new Date(b.dataset.d+'T12:00');d.setDate(d.getDate()+1);if(window.spDato)spDato(b.dataset.d,iso(d));});}
+const steg=()=>matchMedia('(max-width:760px)').matches?1:2;
+bf.onclick=()=>{off=Math.max(0,off-steg());tegn();};bn.onclick=()=>{off=Math.min(MAKS,off+steg());tegn();};
+document.getElementById('lang-no').addEventListener('click',()=>data&&tegn());document.getElementById('lang-en').addEventListener('click',()=>data&&tegn());
+fetch('opptatt.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{
+ if(!j||!j.aktiv)return;data=j;opt=new Set(j.opptatt||[]);
+ sek.hidden=false;document.querySelectorAll('.kal-lenke').forEach(a=>a.hidden=false);tegn();
+ if(location.hash==='#kalender')sek.scrollIntoView();}).catch(()=>{});
+})();
 </script>
 
 </body>
