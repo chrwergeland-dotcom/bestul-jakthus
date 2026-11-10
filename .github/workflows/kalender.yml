@@ -1,0 +1,23 @@
+name: Oppdater kalender
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: kalender
+jobs:
+  synk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hent opptatte datoer fra Google-kalenderen
+        env:
+          KALENDER_ICS: ${{ vars.KALENDER_ICS }}
+        run: python3 .github/kalender.py
+      - name: Lagre hvis endret
+        run: |
+          git config user.name "kalender-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add opptatt.json
+          git diff --cached --quiet || (git commit -m "Kalender oppdatert" && git push)
